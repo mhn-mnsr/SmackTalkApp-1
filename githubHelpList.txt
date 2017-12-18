@@ -26,5 +26,8 @@ git push
 git branch <name> (create new branch)
 git checkout (leave master to work on new branch)
 
+
 #When changes to .gitignore have been made run below command to remove files already uploaded to git.
 git rm -r --cached .
+
+Hello From Maheen
