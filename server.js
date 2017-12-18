@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, "./client/static")));
 app.use(bodyParser.json())
-app.use(express.static(__dirname + '/angularBeltApp/dist'));
+app.use(express.static(__dirname + '/client/dist'));
 app.use(session({secret: 'codingdojorocks'}));
 
 
