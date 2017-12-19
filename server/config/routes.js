@@ -12,4 +12,9 @@ module.exports = function (app) {
         console.log("====In routes/made it to registerUser post route====")
     });
 
+    app.post('/api/loginUser', function(req, res){
+        controller.loginUser(req, res);
+        console.log("===In routes/ made it to loginUser===")
+    })
+
 };

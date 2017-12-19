@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 var User = mongoose.model("User");
-var bcrypt = require('bcrypt-nodejs');
+var bcrypt = require('bcrypt');
+// var oldbcrypt = require('bcrypt-nodejs');
+
 
 module.exports = {
     index: function(req, res) {
@@ -50,10 +52,12 @@ module.exports = {
             if (regUser != null){
                 console.log("====In controller, loginUser function, after if regUser != null======")
                 console.log(regUser);
+                console.log(req.body.password);
                 bcrypt.compare(req.body.password, regUser.password)
                 .then(function (matchedPassword) {
                     console.log("====in controller/loginUser, passwords match====");
                     req.session.user = regUser._id;
+                    res.json({good: "New user created successfully"})
                 })
                 .catch(function (errors, notMatched) {
                     console.log("===in contoller/loginUser, emails dont match====");
