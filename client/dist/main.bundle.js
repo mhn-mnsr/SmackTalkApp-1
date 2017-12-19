@@ -93,7 +93,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<router-outlet></router-outlet>\r\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -144,12 +144,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__success_success_component__ = __webpack_require__("../../../../../src/app/success/success.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__join_team_join_team_component__ = __webpack_require__("../../../../../src/app/join-team/join-team.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -171,16 +173,13 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__landing_login_login_component__["a" /* LoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__["a" /* RegisterComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__["a" /* LandingComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__success_success_component__["a" /* SuccessComponent */]
+                __WEBPACK_IMPORTED_MODULE_10__success_success_component__["a" /* SuccessComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__join_team_join_team_component__["a" /* JoinTeamComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */],
-<<<<<<< HEAD
                 __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* HttpModule */],
-=======
-                __WEBPACK_IMPORTED_MODULE_6__angular_http__["a" /* HttpModule */],
->>>>>>> f0f6d12071ba93898b453f85a517454337b0869a
                 __WEBPACK_IMPORTED_MODULE_2__app_routing_module__["a" /* AppRoutingModule */]
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_3__data_service__["a" /* DataService */]],
@@ -200,13 +199,10 @@ var AppModule = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/toPromise.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
-=======
->>>>>>> f0f6d12071ba93898b453f85a517454337b0869a
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -217,7 +213,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-<<<<<<< HEAD
 
 
 
@@ -233,16 +228,69 @@ var DataService = (function () {
     DataService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
-=======
-var DataService = (function () {
-    function DataService() {
-    }
-    DataService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
->>>>>>> f0f6d12071ba93898b453f85a517454337b0869a
     ], DataService);
     return DataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/join-team/join-team.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/join-team/join-team.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  join-team works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/join-team/join-team.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JoinTeamComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var JoinTeamComponent = (function () {
+    function JoinTeamComponent() {
+    }
+    JoinTeamComponent.prototype.ngOnInit = function () {
+    };
+    JoinTeamComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-join-team',
+            template: __webpack_require__("../../../../../src/app/join-team/join-team.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/join-team/join-team.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], JoinTeamComponent);
+    return JoinTeamComponent;
 }());
 
 
@@ -257,7 +305,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#container{\r\n    background-color: #BEBEBE;\r\n    height: 1100px;\r\n    width: 1100px;\r\n\r\n}\r\n\r\n#logo{\r\n    background-color: lightgray;\r\n    height: 250px;\r\n    width: 700px;\r\n    margin: 0px auto;\r\n}\r\n\r\n#loginRegBox{\r\n    width: 700px;\r\n    height: 600px;\r\n    margin: 80px auto 0px;\r\n    background-color: #B6B6B6;\r\n    box-shadow: 7px 7px gray;\r\n}\r\n", ""]);
+exports.push([module.i, "#container{\n    background-color: #BEBEBE;\n    height: 1100px;\n    width: 1100px;\n\n}\n\n#logo{\n    background-color: lightgray;\n    height: 250px;\n    width: 700px;\n    margin: 0px auto;\n}\n\n#loginRegBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #B6B6B6;\n    box-shadow: 7px 7px gray;\n}\n", ""]);
 
 // exports
 
@@ -270,7 +318,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/landing.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\r\n  <div id=\"logo\">\r\n\r\n  </div>\r\n  <div id=\"loginRegBox\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginRegBox\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -318,7 +366,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* #container{\r\n    background-color: #BEBEBE;\r\n    height: 1100px;\r\n    width: 1100px;\r\n\r\n}\r\n\r\n#logo{\r\n    background-color: lightgray;\r\n    height: 250px;\r\n    width: 700px;\r\n    margin: 0px auto;\r\n}\r\n\r\n#registrationBox{\r\n    width: 700px;\r\n    height: 600px;\r\n    margin: 80px auto 0px;\r\n    background-color: #B6B6B6;\r\n    box-shadow: 7px 7px gray;\r\n} */\r\n\r\n#login{\r\n    width: 700px;\r\n    height: 600px;\r\n    margin: 80px auto 0px;\r\n    background-color: #C9C9C9;\r\n}\r\n\r\n#logTitle{\r\n    font-family: 'Open Sans', sans-serif;\r\n    color: #555;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    font-weight: 800;\r\n    letter-spacing: 15px;\r\n    padding-top: 50px;\r\n    line-height: 1;\r\n    /* text-shadow: #FFFFFF 3px 2px 0; */\r\n    position: relative;\r\n    \r\n}\r\n\r\n\r\n.inputfields{\r\n    font-size: 30px;\r\n    height: 60px;\r\n    width: 600px;\r\n    margin-top: 20px;\r\n    margin-left: 50px;\r\n    text-transform: uppercase;  \r\n    font-weight: 10;  \r\n    letter-spacing: 1px;    \r\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n    text-align: center;\r\n}\r\n\r\n\r\n#loginButton{\r\n    height: 60px;\r\n    width: 200px;\r\n    font-size: 30px;\r\n    font-weight: 1000;\r\n    margin-top: 30px;\r\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n    text-transform: uppercase;\r\n}\r\nh3{\r\n    display: inline-block;\r\n    margin-left: 350px;\r\n    margin-top: 0px;\r\n}\r\n\r\n::-webkit-input-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}\r\n::-moz-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}\r\n:-ms-input-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}\r\n:-moz-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}", ""]);
+exports.push([module.i, "/* #container{\n    background-color: #BEBEBE;\n    height: 1100px;\n    width: 1100px;\n\n}\n\n#logo{\n    background-color: lightgray;\n    height: 250px;\n    width: 700px;\n    margin: 0px auto;\n}\n\n#registrationBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #B6B6B6;\n    box-shadow: 7px 7px gray;\n} */\n\n#login{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #C9C9C9;\n}\n\n#logTitle{\n    font-family: 'Open Sans', sans-serif;\n    color: #555;\n    text-decoration: none;\n    text-transform: uppercase;\n    font-size: 50px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 15px;\n    padding-top: 50px;\n    line-height: 1;\n    /* text-shadow: #FFFFFF 3px 2px 0; */\n    position: relative;\n    \n}\n\n\n.inputfields{\n    font-size: 30px;\n    height: 60px;\n    width: 600px;\n    margin-top: 20px;\n    margin-left: 50px;\n    text-transform: uppercase;  \n    font-weight: 10;  \n    letter-spacing: 1px;    \n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-align: center;\n}\n\n\n#loginButton{\n    height: 60px;\n    width: 200px;\n    font-size: 30px;\n    font-weight: 1000;\n    margin-top: 30px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-transform: uppercase;\n}\nh3{\n    display: inline-block;\n    margin-left: 350px;\n    margin-top: 0px;\n}\n\n::-webkit-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n::-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-ms-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}", ""]);
 
 // exports
 
@@ -331,7 +379,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\r\n  <div id=\"logo\">\r\n\r\n  </div>\r\n  <div id=\"loginBox\">\r\n    <div id=\"login\">\r\n      <h1 id=\"logTitle\">Login</h1>\r\n      <form class=\"inputs\">\r\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\"><br>\r\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\"><br>\r\n        <input class=\"inputfields\" id=\"loginButton\" type=\"submit\" value=\"Login\">\r\n      </form>\r\n      <h3>Don't have an account? <a [routerLink]=\"['']\">Register here!</a></h3>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginBox\">\n    <div id=\"login\">\n      <h1 id=\"logTitle\">Login</h1>\n      <form class=\"inputs\">\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\"><br>\n        <input class=\"inputfields\" id=\"loginButton\" type=\"submit\" value=\"Login\">\n      </form>\n      <h3>Don't have an account? <a [routerLink]=\"['']\">Register here!</a></h3>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -379,7 +427,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* #container{\r\n    background-color: #BEBEBE;\r\n    height: 1100px;\r\n    width: 1100px;\r\n\r\n}\r\n\r\n#logo{\r\n    background-color: lightgray;\r\n    height: 250px;\r\n    width: 700px;\r\n    margin: 0px auto;\r\n}\r\n\r\n#registrationBox{\r\n    width: 700px;\r\n    height: 600px;\r\n    margin: 80px auto 0px;\r\n    background-color: #B6B6B6;\r\n    box-shadow: 7px 7px gray;\r\n} */\r\n\r\n#registration{\r\n    width: 700px;\r\n    height: 600px;\r\n    margin: 80px auto 0px;\r\n    background-color: #C9C9C9;\r\n}\r\n\r\n#regTitle{\r\n    font-family: 'Open Sans', sans-serif;\r\n    color: #555;\r\n    text-decoration: none;\r\n    text-transform: uppercase;\r\n    font-size: 50px;\r\n    text-align: center;\r\n    font-weight: 800;\r\n    letter-spacing: 15px;\r\n    padding-top: 50px;\r\n    line-height: 1;\r\n    /* text-shadow: #FFFFFF 3px 2px 0; */\r\n    position: relative;\r\n    \r\n}\r\n\r\n\r\n.inputfields{\r\n    font-size: 30px;\r\n    height: 60px;\r\n    width: 600px;\r\n    margin-top: 20px;\r\n    margin-left: 50px;\r\n    text-transform: uppercase;  \r\n    font-weight: 10;  \r\n    letter-spacing: 1px;    \r\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n    text-align: center;\r\n}\r\n\r\n\r\n#registerButton{\r\n    height: 60px;\r\n    width: 200px;\r\n    font-size: 30px;\r\n    font-weight: 1000;\r\n    margin-top: 30px;\r\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n    text-transform: uppercase;\r\n}\r\nh3{\r\n    display: inline-block;\r\n    margin-left: 350px;\r\n    margin-top: 0px;\r\n}\r\n\r\n::-webkit-input-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}\r\n::-moz-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}\r\n:-ms-input-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}\r\n:-moz-placeholder { \r\n    color: #D8D8D8;\r\n    text-align: center;\r\n}", ""]);
+exports.push([module.i, "/* #container{\n    background-color: #BEBEBE;\n    height: 1100px;\n    width: 1100px;\n\n}\n\n#logo{\n    background-color: lightgray;\n    height: 250px;\n    width: 700px;\n    margin: 0px auto;\n}\n\n#registrationBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #B6B6B6;\n    box-shadow: 7px 7px gray;\n} */\n\n#registration{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #C9C9C9;\n}\n\n#regTitle{\n    font-family: 'Open Sans', sans-serif;\n    color: #555;\n    text-decoration: none;\n    text-transform: uppercase;\n    font-size: 50px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 15px;\n    padding-top: 50px;\n    line-height: 1;\n    /* text-shadow: #FFFFFF 3px 2px 0; */\n    position: relative;\n    \n}\n\n\n.inputfields{\n    font-size: 30px;\n    height: 60px;\n    width: 600px;\n    margin-top: 20px;\n    margin-left: 50px;\n    text-transform: uppercase;  \n    font-weight: 10;  \n    letter-spacing: 1px;    \n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-align: center;\n}\n\n\n#registerButton{\n    height: 60px;\n    width: 200px;\n    font-size: 30px;\n    font-weight: 1000;\n    margin-top: 30px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-transform: uppercase;\n}\nh3{\n    display: inline-block;\n    margin-left: 350px;\n    margin-top: 0px;\n}\n\n::-webkit-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n::-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-ms-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}", ""]);
 
 // exports
 
@@ -392,11 +440,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/register/register.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
 module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n    <div id=\"registration\">\n      <h1 id=\"regTitle\">Register</h1>\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\n        <input placeholder=\"Username\" class=\"inputfields\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" #username required minlength=\"2\"><br>\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\" [(ngModel)]=\"user.email\" #email required minlength=\"5\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\" [(ngModel)]=\"user.password\" #password required minlength=\"4\"><br>\n        <input placeholder=\"Confirm Password\" class=\"inputfields\" type=\"text\" name=\"confirmPassword\" [(ngModel)]=\"user.confirmPassword\" #confirmPassword required minlength=\"4\"><br>\n        <input class=\"inputfields\" id=\"registerButton\" type=\"submit\" value=\"Register\">\n      </form>\n      <h3>Already have an account? <a [routerLink]=\"['login']\">Log In Here!</a></h3>\n  </div>\n</div>\n"
-=======
-module.exports = "<div id=\"container\">\r\n  <div id=\"logo\">\r\n\r\n  </div>\r\n    <div id=\"registration\">\r\n      <h1 id=\"regTitle\">Register</h1>\r\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\r\n        <input placeholder=\"Username\" class=\"inputfields\" type=\"text\" name=\"username\"><br>\r\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\"><br>\r\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\"><br>\r\n        <input placeholder=\"Confirm Password\" class=\"inputfields\" type=\"text\" name=\"confirmPassword\"><br>\r\n        <input class=\"inputfields\" id=\"registerButton\" type=\"submit\" value=\"Register\">\r\n      </form>\r\n      <h3>Already have an account? <a [routerLink]=\"['login']\">Log In Here!</a></h3>\r\n  </div>\r\n</div>\r\n"
->>>>>>> f0f6d12071ba93898b453f85a517454337b0869a
 
 /***/ }),
 

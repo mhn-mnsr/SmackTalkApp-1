@@ -11,6 +11,7 @@ import { LoginComponent } from './landing/login/login.component';
 import { RegisterComponent } from './landing/register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import { SuccessComponent } from './success/success.component';
+import { JoinTeamComponent } from './join-team/join-team.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SuccessComponent } from './success/success.component';
     LoginComponent,
     RegisterComponent,
     LandingComponent,
-    SuccessComponent
+    SuccessComponent,
+    JoinTeamComponent
   ],
   imports: [
     BrowserModule,
