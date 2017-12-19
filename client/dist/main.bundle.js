@@ -27,8 +27,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__landing_login_login_component__ = __webpack_require__("../../../../../src/app/landing/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__success_success_component__ = __webpack_require__("../../../../../src/app/success/success.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -40,7 +39,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
+// import { SuccessComponent } from './success/success.component';
 
 var routes = [
     { path: '',
@@ -50,16 +49,16 @@ var routes = [
             { path: 'login', component: __WEBPACK_IMPORTED_MODULE_2__landing_login_login_component__["a" /* LoginComponent */] },
         ]
     },
-    {
-        path: 'success',
-        pathMatch: 'full',
-        component: __WEBPACK_IMPORTED_MODULE_5__success_success_component__["a" /* SuccessComponent */],
-        children: [],
-    },
+    // {
+    //   path: 'success',
+    //   pathMatch: 'full',
+    //   component: SuccessComponent,
+    //   children: [],
+    // },
     {
         path: 'home',
         pathMatch: 'full',
-        component: __WEBPACK_IMPORTED_MODULE_6__home_home_component__["a" /* HomeComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_5__home_home_component__["a" /* HomeComponent */],
         children: [],
     },
 ];
@@ -151,8 +150,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__landing_login_login_component__ = __webpack_require__("../../../../../src/app/landing/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__success_success_component__ = __webpack_require__("../../../../../src/app/success/success.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -169,7 +167,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
+// import { SuccessComponent } from './success/success.component';
 
 var AppModule = (function () {
     function AppModule() {
@@ -181,8 +179,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_7__landing_login_login_component__["a" /* LoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__["a" /* RegisterComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__["a" /* LandingComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__success_success_component__["a" /* SuccessComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */]
+                // SuccessComponent,
+                __WEBPACK_IMPORTED_MODULE_10__home_home_component__["a" /* HomeComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -318,7 +316,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#backgroundimg{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n\n#container{\n    /* height: 1100px;\n    /* width: 1100px; */\n    /* background-image: url(./static/smacktalkerspic.jpg);\n    background-repeat: no-repeat; */\n    \n}\n\n\n#logo{\n    height: 300px;\n    width: 700px;\n    margin: 0px auto;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n}\n\n\n#loginRegBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #FFFFFF;\n    opacity: .95;\n    border-radius: 40px;\n    /* box-shadow: 7px 7px gray; */\n}\n", ""]);
+exports.push([module.i, "#container{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    min-height: 1200px;\n    padding-top: 100px;\n}\n\n#logo{\n    height: 300px;\n    width: 700px;\n    margin: 0px auto;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n    \n}\n\n\n#loginRegBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #FFFFFF;\n    opacity: .95;\n    border-radius: 40px;\n    /* box-shadow: 7px 7px gray; */\n}\n", ""]);
 
 // exports
 
@@ -331,7 +329,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/landing.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"backgroundimg\">\n<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginRegBox\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n</div>\n\n"
+module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginRegBox\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -544,67 +542,6 @@ module.exports = __webpack_require__.p + "smacktalkerspic.683b734aa0dd1ecb7632.j
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "smacktestlogo.f27ac345af0ce87f5e8f.png";
-
-/***/ }),
-
-/***/ "../../../../../src/app/success/success.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/success/success.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h1>Success</h1>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/success/success.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SuccessComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var SuccessComponent = (function () {
-    function SuccessComponent() {
-    }
-    SuccessComponent.prototype.ngOnInit = function () {
-    };
-    SuccessComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-success',
-            template: __webpack_require__("../../../../../src/app/success/success.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/success/success.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], SuccessComponent);
-    return SuccessComponent;
-}());
-
-
 
 /***/ }),
 
