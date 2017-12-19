@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
       } else {
         this._router.navigateByUrl('success');
       }
-    } )
+    })
   }
 
 }

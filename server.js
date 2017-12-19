@@ -5,10 +5,7 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var session = require('express-session');
 
-app.set('views', path.join( __dirname, './client/views'));
-app.set('view engine', 'ejs');
 
-app.use(express.static(path.join(__dirname, "./client/static")));
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/client/dist'));
 app.use(session({secret: 'codingdojorocks'}));

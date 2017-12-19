@@ -15,4 +15,10 @@ export class DataService {
     .toPromise();
   }
 
+
+  login(user){
+    return this._http.post('/api/loginUser', user)
+    .map(data => data.json())
+    .toPromise();
+  }
 }

@@ -4,6 +4,8 @@ import { LoginComponent } from './landing/login/login.component';
 import { RegisterComponent } from './landing/register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import { SuccessComponent } from './success/success.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 const routes: Routes = [
@@ -18,6 +20,12 @@ const routes: Routes = [
     path: 'success',
     pathMatch: 'full',
     component: SuccessComponent,
+    children: [],
+  },
+  {
+    path: 'home',
+    pathMatch: 'full',
+    component: HomeComponent,
     children: [],
   },
 ];
