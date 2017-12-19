@@ -4,11 +4,11 @@
   </div>
     <div id="registration">
       <h1 id="regTitle">Register</h1>
-      <form class="inputs">
+      <form class="inputs" (submit)="onSubmit()">
         <input placeholder="Username" class="inputfields" type="text" name="username"><br>
         <input placeholder="Email Address" class="inputfields" type="text" name="email"><br>
         <input placeholder="Password" class="inputfields" type="text" name="password"><br>
-        <input placeholder="Confirm Password" class="inputfields" type="text" name="confrimPassword"><br>
+        <input placeholder="Confirm Password" class="inputfields" type="text" name="confirmPassword"><br>
         <input class="inputfields" id="registerButton" type="submit" value="Register">
       </form>
       <h3>Already have an account? <a [routerLink]="['login']">Log In Here!</a></h3>
