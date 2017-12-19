@@ -19,7 +19,7 @@ const routes: Routes = [
     pathMatch: 'full',
     component: SuccessComponent,
     children: [],
-  }
+  },
 ];
 // export const routing = RouterModule.forRoot(routes);
 
