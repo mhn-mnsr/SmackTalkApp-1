@@ -21,8 +21,7 @@ module.exports = {
             username: req.body.username,
             email: req.body.email,
             // Below 2 lines to be used in userProfile function
-            // firstName: req.body.firstName,
-            // lastName: req.body.lastName,
+            // firstName: req.body.firstName
             // bio: req.body.bio
             password: req.body.password,
             confirmPassword: req.body.confirmPassword
