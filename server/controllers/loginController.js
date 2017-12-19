@@ -21,15 +21,19 @@ module.exports = {
             username: req.body.username,
             email: req.body.email,
             // Below 2 lines to be used in userProfile function
-            // firstName: req.body.firstName
+            // firstName: req.body.firstName,
+            // lastName: req.body.lastName,
             // bio: req.body.bio
             password: req.body.password,
             confirmPassword: req.body.confirmPassword
         });
         if(req.body.password == req.body.confirmPassword){
             console.log("===In controller, createUser function, confirmpassword check====")
+            console.log(regUser);
+            console.log(req.body);
             regUser.save(function (err){
                 if(err){
+                    console.log(err);
                     res.json({error: "Saving error in create user"});
                 } else {
                     res.json({good: "New user created successfully"})

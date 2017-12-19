@@ -21,11 +21,11 @@ var UserSchema = new mongoose.Schema({
     },
     firstName: {
         type: String,
-        required: [true, 'First name cannot be blank']
+        // required: [true, 'First name cannot be blank']
     },
     lastName: {
         type: String,
-        required: [true, 'Last name cannot be blank']
+        // required: [true, 'Last name cannot be blank']
     },
     password: {
         type: String,
@@ -37,7 +37,7 @@ var UserSchema = new mongoose.Schema({
     },
     bio: {
         type: String,
-        required: [true, 'bio cannot be blank']
+        // required: [true, 'bio cannot be blank']
     }
 
   }, {timestamps: true});
