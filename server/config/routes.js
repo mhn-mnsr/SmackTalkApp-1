@@ -1,3 +1,4 @@
+var mongoose = require('mongoose');
 var controller = require('../controllers/loginController.js');
 module.exports = function (app) {
 
@@ -6,9 +7,9 @@ module.exports = function (app) {
     app.get('/', function (req, res) {
         controller.index(req, res);
     });
-    // app.post('/formSubmit', function(req, res) {
-    //     controller.formSubmit(req, res);
-    //     console.log("made it to formsubmit post route")
-    // });
+    app.post('/api/registerUser', function(req, res) {
+        controller.createUser(req, res);
+        console.log("====In routes/made it to registerUser post route====")
+    });
 
 };

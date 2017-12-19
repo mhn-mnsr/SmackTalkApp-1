@@ -5,10 +5,10 @@
     <div id="registration">
       <h1 id="regTitle">Register</h1>
       <form class="inputs" (submit)="onSubmit()">
-        <input placeholder="Username" class="inputfields" type="text" name="username"><br>
-        <input placeholder="Email Address" class="inputfields" type="text" name="email"><br>
-        <input placeholder="Password" class="inputfields" type="text" name="password"><br>
-        <input placeholder="Confirm Password" class="inputfields" type="text" name="confirmPassword"><br>
+        <input placeholder="Username" class="inputfields" type="text" name="username" [(ngModel)]="user.username" #username required minlength="2"><br>
+        <input placeholder="Email Address" class="inputfields" type="text" name="email" [(ngModel)]="user.email" #email required minlength="5"><br>
+        <input placeholder="Password" class="inputfields" type="text" name="password" [(ngModel)]="user.password" #password required minlength="4"><br>
+        <input placeholder="Confirm Password" class="inputfields" type="text" name="confirmPassword" [(ngModel)]="user.confirmPassword" #confirmPassword required minlength="4"><br>
         <input class="inputfields" id="registerButton" type="submit" value="Register">
       </form>
       <h3>Already have an account? <a [routerLink]="['login']">Log In Here!</a></h3>
