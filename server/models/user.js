@@ -2,6 +2,7 @@ console.log('users model');
 var mongoose = require("mongoose");
 var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 var bcrypt = require('bcrypt-nodejs');
+var user = require('express-session');
 
 
 var UserSchema = new mongoose.Schema({
@@ -30,11 +31,15 @@ var UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password cannot be blank']
     },
+    confirmPassword: {
+        type: String,
+        required: true
+    },
     bio: {
         type: String,
         required: [true, 'bio cannot be blank']
     }
-    
+
   }, {timestamps: true});
 
   //hashes my password
