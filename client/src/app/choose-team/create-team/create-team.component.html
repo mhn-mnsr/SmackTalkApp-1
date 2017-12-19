@@ -1,0 +1,31 @@
+<div>
+
+  <div>
+    <fieldset>
+      <legend>Invite friends to join your new team</legend>
+      <button *ngFor="let user of allUsers, let idx = index">{{ user.username }}</button>
+    </fieldset>
+  </div>
+
+  <div>
+    <fieldset>
+      <legend>Write a description of your Team</legend>
+      <textarea name="teamDesc" cols="30" rows="10"></textarea>
+    </fieldset>
+  </div>
+
+
+  <div>
+    <fieldset>
+      <legend>Invited Users</legend>
+      <ul>
+        <li>User 1</li>
+        <li>User 4</li>
+      </ul>
+    </fieldset>
+  </div>
+
+    <br><br>
+<button (click)="createTeam()">Create Team</button>
+
+</div>

@@ -56,8 +56,8 @@ module.exports = {
                 })
                 .catch(function (errors, notMatched) {
                     console.log("===in contoller/loginUser, emails dont match====");
-                })
+                });
             }
-        })
+        });
     }
 }

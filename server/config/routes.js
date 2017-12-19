@@ -1,15 +1,20 @@
 var mongoose = require('mongoose');
-var controller = require('../controllers/loginController.js');
+var loginController = require('../controllers/loginController.js');
+var teamController = require('../controllers/teamController.js');
 module.exports = function (app) {
 
     // ROUTES//
 
     app.get('/', function (req, res) {
-        controller.index(req, res);
+        loginController.index(req, res);
     });
     app.post('/api/registerUser', function(req, res) {
-        controller.createUser(req, res);
-        console.log("====In routes/made it to registerUser post route====")
+        loginController.createUser(req, res);
+        console.log("====In routes/made it to registerUser post route====");
+    });
+    app.get('/api/getAllUsers', function (req, res) {
+        console.log('Reached the getAllUsers route in routes.js');
+        teamController.getAllUsers(req, res);
     });
 
 };
