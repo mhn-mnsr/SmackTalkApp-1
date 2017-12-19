@@ -1,4 +1,4 @@
-#container{
+/* #container{
     background-color: #BEBEBE;
     height: 1100px;
     width: 1100px;
@@ -18,16 +18,16 @@
     margin: 80px auto 0px;
     background-color: #B6B6B6;
     box-shadow: 7px 7px gray;
-}
+} */
 
-#registration{
+#login{
     width: 700px;
     height: 600px;
     margin: 80px auto 0px;
     background-color: #C9C9C9;
 }
 
-#regTitle{
+#logTitle{
     font-family: 'Open Sans', sans-serif;
     color: #555;
     text-decoration: none;
@@ -58,7 +58,7 @@
 }
 
 
-#registerButton{
+#loginButton{
     height: 60px;
     width: 200px;
     font-size: 30px;
