@@ -1,8 +1,8 @@
 console.log('users model');
 var mongoose = require("mongoose");
 var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-var bcrypt = require('bcrypt-nodejs');
-var user = require('express-session');
+var bcrypt = require('bcrypt');
+var userSession = require('express-session');
 
 
 var UserSchema = new mongoose.Schema({
@@ -38,7 +38,8 @@ var UserSchema = new mongoose.Schema({
     bio: {
         type: String,
         // required: [true, 'bio cannot be blank']
-    }
+    },
+    teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }]
 
   }, {timestamps: true});
 
@@ -58,5 +59,5 @@ UserSchema.pre('save', function(done) {
 
 
 mongoose.model("User", UserSchema);
-var mongoose = require('mongoose');
+mongoose.model('Team', TeamSchema);
 var User = mongoose.model('User');
