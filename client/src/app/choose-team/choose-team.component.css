@@ -11,31 +11,53 @@
     /* padding-top: 100px; */
 }
 
+#headerbar{
+    height: 100px;
+    padding-top: 20px;
+    width: auto;
+}
+
 #logo{
-    height: 200px;
-    width: 405px;
+    height: 100px;
+    width: 210px;
     background-color: white;
     background-image: url(../landing/static/smacktestlogo.png);
     background-size: cover;
     border-radius: 40px;
     opacity: .95;
+    margin-left: 20px;
     
 }
 
 #buttonContainer{
-    height: 800px;
-    width: 700px;
+    height: 400px;
+    width: 500px;
     margin: 0px auto;
+}
+h1{
+    margin: 0px 393px 30px;
+    font-size: 40px;
+    font-family: 'Open Sans', sans-serif;    
+    color: #282946;   
+}
+
+.buttonTitle{
+    color: #282946;   
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;    
+    
+}
+p{
+    color: #282946;   
+    font-size: 20px;
+    font-weight: 250;
+    font-family: 'Open Sans', sans-serif;        
 }
 
 button{
-    font-size: 60px;
-    font-weight: 800;
-    color: #282946;    
-    letter-spacing: 12px;    
-    font-family: 'Open Sans', sans-serif;    
-    height: 300px;
-    width: 700px;
+    color: #282946;       
+    height: 200px;
+    width: 500px;
     margin: 30px auto;
     background-color: white;
     /* background-image: url(./static/smacktestlogo.png); */

@@ -1,8 +1,17 @@
 <div id="container">
-    <div id="logo"></div>
+    <div id="headerbar">
+        <div id="logo"></div>
+    </div>
+    <h1>Prepare your palms.</h1>
     <div id="buttonContainer">
-        <button [routerLink]="['/createTeam']">Create Team</button>
-        <button [routerLink]="['/joinTeam']">Join Team</button>
+        <button [routerLink]="['/createTeam']">
+            <h3 class="buttonTitle">Create a new team</h3>
+            <p>Start a new space for your friends.</p>
+        </button>
+        <button [routerLink]="['/joinTeam']">
+            <h3 class="buttonTitle">Find your team</h3>
+            <p>Join an existing team.</p>
+        </button>
     </div>
 </div>
   
