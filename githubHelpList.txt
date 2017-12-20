@@ -30,6 +30,3 @@ git checkout (leave master to work on new branch)
 #When changes to .gitignore have been made run below command to remove files already uploaded to git.
 git rm -r --cached .
 
-
-hello from adar
-Hello From Maheen

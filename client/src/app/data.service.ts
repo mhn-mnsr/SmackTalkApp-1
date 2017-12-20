@@ -9,11 +9,19 @@ export class DataService {
 
   constructor(private _http: Http) { }
 
-  addUser(newUser){
+  addUser(newUser) {
     return this._http.post('/api/registerUser', newUser)
     .map(data => data.json())
     .toPromise();
   }
+
+  getAllUsers() {
+    console.log('reached the getAllUsers function in service.ts file');
+    return this._http.get('/api/getAllUsers')
+    .map(response => response.json())
+    .toPromise();
+  }
+
 
 
   login(user){
@@ -21,4 +29,5 @@ export class DataService {
     .map(data => data.json())
     .toPromise();
   }
+
 }

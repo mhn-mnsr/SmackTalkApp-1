@@ -10,7 +10,8 @@ import { HttpModule } from '@angular/http';
 import { LoginComponent } from './landing/login/login.component';
 import { RegisterComponent } from './landing/register/register.component';
 import { LandingComponent } from './landing/landing.component';
-import { SuccessComponent } from './success/success.component';
+import { CreateTeamComponent } from './/choose-team/create-team/create-team.component';
+import { ChooseTeamComponent } from './choose-team/choose-team.component';
 import { HomeComponent } from './home/home.component';
 
 
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     RegisterComponent,
     LandingComponent,
-    SuccessComponent,
+    CreateTeamComponent,
+    ChooseTeamComponent,
     HomeComponent
   ],
   imports: [
