@@ -51,12 +51,10 @@ var routes = [
             { path: '', component: __WEBPACK_IMPORTED_MODULE_3__landing_register_register_component__["a" /* RegisterComponent */] },
             { path: 'login', component: __WEBPACK_IMPORTED_MODULE_2__landing_login_login_component__["a" /* LoginComponent */] },
         ] },
-    { path: 'chooseTeam', component: __WEBPACK_IMPORTED_MODULE_6__choose_team_choose_team_component__["a" /* ChooseTeamComponent */], children: [
-            { path: 'createTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_5__choose_team_create_team_create_team_component__["a" /* CreateTeamComponent */] },
-            { path: 'joinTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_8__join_team_join_team_component__["a" /* JoinTeamComponent */] }
-        ] },
-    { path: 'home', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */], children: []
-    }
+    { path: 'chooseTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_6__choose_team_choose_team_component__["a" /* ChooseTeamComponent */] },
+    { path: 'createTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_5__choose_team_create_team_create_team_component__["a" /* CreateTeamComponent */] },
+    { path: 'joinTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_8__join_team_join_team_component__["a" /* JoinTeamComponent */] },
+    { path: 'home', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */] }
 ];
 // export const routing = RouterModule.forRoot(routes);
 var AppRoutingModule = (function () {
@@ -210,7 +208,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "#container{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    min-height: 1200px;\n    /* padding-top: 100px; */\n}\n\n#logo{\n    height: 200px;\n    width: 405px;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n    \n}\n\n#buttonContainer{\n    height: 800px;\n    width: 700px;\n    margin: 0px auto;\n}\n\nbutton{\n    font-size: 60px;\n    font-weight: 800;\n    color: #282946;    \n    letter-spacing: 12px;    \n    font-family: 'Open Sans', sans-serif;    \n    height: 300px;\n    width: 700px;\n    margin: 30px auto;\n    background-color: white;\n    /* background-image: url(./static/smacktestlogo.png); */\n    /* background-size: cover; */\n    border-radius: 40px;\n    opacity: .95;\n    \n}", ""]);
 
 // exports
 
@@ -223,7 +221,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/choose-team/choose-team.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>at choose team</h1>"
+module.exports = "<div id=\"container\">\n    <div id=\"logo\"></div>\n    <div id=\"buttonContainer\">\n        <button [routerLink]=\"['/createTeam']\">Create Team</button>\n        <button [routerLink]=\"['/joinTeam']\">Join Team</button>\n    </div>\n</div>\n  \n  \n  "
 
 /***/ }),
 
@@ -427,7 +425,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  home works!\n</p>\n"
+module.exports = "<h1>Home</h1>\n\n<a [routerLink]=\"['/chooseTeam']\">Go to chooseTeam page</a>\n\n"
 
 /***/ }),
 
