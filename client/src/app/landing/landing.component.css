@@ -7,12 +7,12 @@
     background-image: url(./static/smacktalkerspic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 1200px;
-    padding-top: 100px;
+    min-height: 1100px;
+    padding-top: 80px;
 }
 
 #logo{
-    height: 300px;
+    height: 320px;
     width: 700px;
     margin: 0px auto;
     background-color: white;
