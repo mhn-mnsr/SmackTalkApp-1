@@ -32,7 +32,7 @@ testem.log
 /typings
 
 # e2e
-/e2e/.js
+/e2e/.jsgit
 /e2e/.map
 
 # System Files
