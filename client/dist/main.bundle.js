@@ -152,11 +152,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__success_success_component__ = __webpack_require__("../../../../../src/app/success/success.component.ts");
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__join_team_join_team_component__ = __webpack_require__("../../../../../src/app/join-team/join-team.component.ts");
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
->>>>>>> master
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -186,11 +182,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__["a" /* RegisterComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__["a" /* LandingComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__success_success_component__["a" /* SuccessComponent */],
-<<<<<<< HEAD
-                __WEBPACK_IMPORTED_MODULE_11__join_team_join_team_component__["a" /* JoinTeamComponent */]
-=======
                 __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */]
->>>>>>> master
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -257,11 +249,7 @@ var DataService = (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "../../../../../src/app/join-team/join-team.component.css":
-=======
 /***/ "../../../../../src/app/home/home.component.css":
->>>>>>> master
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -279,20 +267,6 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "../../../../../src/app/join-team/join-team.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  join-team works!\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/join-team/join-team.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JoinTeamComponent; });
-=======
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
@@ -305,7 +279,6 @@ module.exports = "<p>\n  home works!\n</p>\n"
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
->>>>>>> master
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -317,22 +290,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-<<<<<<< HEAD
-var JoinTeamComponent = (function () {
-    function JoinTeamComponent() {
-    }
-    JoinTeamComponent.prototype.ngOnInit = function () {
-    };
-    JoinTeamComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'app-join-team',
-            template: __webpack_require__("../../../../../src/app/join-team/join-team.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/join-team/join-team.component.css")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], JoinTeamComponent);
-    return JoinTeamComponent;
-=======
 var HomeComponent = (function () {
     function HomeComponent() {
     }
@@ -347,7 +304,6 @@ var HomeComponent = (function () {
         __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
->>>>>>> master
 }());
 
 
@@ -362,11 +318,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "#container{\n    background-color: #BEBEBE;\n    height: 1100px;\n    width: 1100px;\n\n}\n\n#logo{\n    background-color: lightgray;\n    height: 250px;\n    width: 700px;\n    margin: 0px auto;\n}\n\n#loginRegBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #B6B6B6;\n    box-shadow: 7px 7px gray;\n}\n", ""]);
-=======
 exports.push([module.i, "#backgroundimg{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n}\n\n#container{\n    /* height: 1100px;\n    /* width: 1100px; */\n    /* background-image: url(./static/smacktalkerspic.jpg);\n    background-repeat: no-repeat; */\n    \n}\n\n\n#logo{\n    height: 300px;\n    width: 700px;\n    margin: 0px auto;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n}\n\n\n#loginRegBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #FFFFFF;\n    opacity: .95;\n    border-radius: 40px;\n    /* box-shadow: 7px 7px gray; */\n}\n", ""]);
->>>>>>> master
 
 // exports
 
@@ -379,11 +331,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/landing.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginRegBox\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n"
-=======
 module.exports = "<div id=\"backgroundimg\">\n<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginRegBox\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n</div>\n\n"
->>>>>>> master
 
 /***/ }),
 
@@ -431,11 +379,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "/* #container{\n    background-color: #BEBEBE;\n    height: 1100px;\n    width: 1100px;\n\n}\n\n#logo{\n    background-color: lightgray;\n    height: 250px;\n    width: 700px;\n    margin: 0px auto;\n}\n\n#registrationBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #B6B6B6;\n    box-shadow: 7px 7px gray;\n} */\n\n#login{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #C9C9C9;\n}\n\n#logTitle{\n    font-family: 'Open Sans', sans-serif;\n    color: #555;\n    text-decoration: none;\n    text-transform: uppercase;\n    font-size: 50px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 15px;\n    padding-top: 50px;\n    line-height: 1;\n    /* text-shadow: #FFFFFF 3px 2px 0; */\n    position: relative;\n    \n}\n\n\n.inputfields{\n    font-size: 30px;\n    height: 60px;\n    width: 600px;\n    margin-top: 20px;\n    margin-left: 50px;\n    text-transform: uppercase;  \n    font-weight: 10;  \n    letter-spacing: 1px;    \n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-align: center;\n}\n\n\n#loginButton{\n    height: 60px;\n    width: 200px;\n    font-size: 30px;\n    font-weight: 1000;\n    margin-top: 30px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-transform: uppercase;\n}\nh3{\n    display: inline-block;\n    margin-left: 350px;\n    margin-top: 0px;\n}\n\n::-webkit-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n::-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-ms-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}", ""]);
-=======
 exports.push([module.i, "\n#login{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #FFFFFF;\n    opacity: .95;\n    border-radius: 40px;\n}\n\n#logTitle{\n    font-family: 'Open Sans', sans-serif;\n    color: #282946;\n    text-decoration: none;\n    font-size: 50px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 15px;\n    padding-top: 50px;\n    line-height: 1;\n    /* text-shadow: #FFFFFF 3px 2px 0; */\n    position: relative;\n    \n}\n\n\n.inputfields{\n    font-size: 30px;\n    height: 60px;\n    width: 600px;\n    margin-top: 20px;\n    margin-left: 50px;\n    font-weight: 10;  \n    letter-spacing: 1px;    \n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-align: center;\n}\n\n\n#loginButton{\n    height: 60px;\n    width: 200px;\n    font-size: 30px;\n    font-weight: 1000;\n    margin-top: 30px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n}\nh3{\n    display: inline-block;\n    margin-left: 350px;\n    margin-top: 0px;\n}\n\n::-webkit-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n::-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-ms-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}", ""]);
->>>>>>> master
 
 // exports
 
@@ -448,11 +392,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/login/login.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginBox\">\n    <div id=\"login\">\n      <h1 id=\"logTitle\">Login</h1>\n      <form class=\"inputs\">\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\"><br>\n        <input class=\"inputfields\" id=\"loginButton\" type=\"submit\" value=\"Login\">\n      </form>\n      <h3>Don't have an account? <a [routerLink]=\"['']\">Register here!</a></h3>\n    </div>\n  </div>\n</div>\n"
-=======
 module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginBox\">\n    <div id=\"login\">\n      <h1 id=\"logTitle\">Login</h1>\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\" [(ngModel)]=\"user.email\" #email=\"ngModel\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\" [(ngModel)]=\"user.password\" #password=\"ngModel\"><br>\n        <input class=\"inputfields\" id=\"loginButton\" type=\"submit\" value=\"Login\">\n      </form>\n      <h3>Don't have an account? <a [routerLink]=\"['']\">Register here!</a></h3>\n    </div>\n  </div>\n</div>\n"
->>>>>>> master
 
 /***/ }),
 
@@ -520,11 +460,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "/* #container{\n    background-color: #BEBEBE;\n    height: 1100px;\n    width: 1100px;\n\n}\n\n#logo{\n    background-color: lightgray;\n    height: 250px;\n    width: 700px;\n    margin: 0px auto;\n}\n\n#registrationBox{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #B6B6B6;\n    box-shadow: 7px 7px gray;\n} */\n\n#registration{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #C9C9C9;\n}\n\n#regTitle{\n    font-family: 'Open Sans', sans-serif;\n    color: #555;\n    text-decoration: none;\n    text-transform: uppercase;\n    font-size: 50px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 15px;\n    padding-top: 50px;\n    line-height: 1;\n    /* text-shadow: #FFFFFF 3px 2px 0; */\n    position: relative;\n    \n}\n\n\n.inputfields{\n    font-size: 30px;\n    height: 60px;\n    width: 600px;\n    margin-top: 20px;\n    margin-left: 50px;\n    text-transform: uppercase;  \n    font-weight: 10;  \n    letter-spacing: 1px;    \n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-align: center;\n}\n\n\n#registerButton{\n    height: 60px;\n    width: 200px;\n    font-size: 30px;\n    font-weight: 1000;\n    margin-top: 30px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-transform: uppercase;\n}\nh3{\n    display: inline-block;\n    margin-left: 350px;\n    margin-top: 0px;\n}\n\n::-webkit-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n::-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-ms-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}", ""]);
-=======
 exports.push([module.i, "\n#registration{\n    width: 700px;\n    height: 600px;\n    margin: 80px auto 0px;\n    background-color: #FFFFFF;\n    opacity: .95;\n    border-radius: 40px;\n}\n\n#regTitle{\n    font-family: 'Open Sans', sans-serif;\n    color: #282946;\n    text-decoration: none;\n    font-size: 50px;\n    text-align: center;\n    font-weight: 800;\n    letter-spacing: 15px;\n    padding-top: 50px;\n    line-height: 1;\n    /* text-shadow: #FFFFFF 3px 2px 0; */\n    position: relative;\n    \n}\n\n\n.inputfields{\n    font-size: 30px;\n    height: 60px;\n    width: 600px;\n    margin-top: 20px;\n    margin-left: 50px;\n    font-weight: 10;  \n    letter-spacing: 1px;    \n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n    text-align: center;\n}\n\n\n#registerButton{\n    height: 60px;\n    width: 200px;\n    font-size: 30px;\n    font-weight: 1000;\n    margin-top: 30px;\n    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\n}\nh3{\n    display: inline-block;\n    margin-left: 350px;\n    margin-top: 0px;\n}\n\n::-webkit-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n::-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-ms-input-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}\n:-moz-placeholder { \n    color: #D8D8D8;\n    text-align: center;\n}", ""]);
->>>>>>> master
 
 // exports
 
@@ -537,11 +473,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/register/register.component.html":
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n    <div id=\"registration\">\n      <h1 id=\"regTitle\">Register</h1>\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\n        <input placeholder=\"Username\" class=\"inputfields\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" #username required minlength=\"2\"><br>\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\" [(ngModel)]=\"user.email\" #email required minlength=\"5\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\" [(ngModel)]=\"user.password\" #password required minlength=\"4\"><br>\n        <input placeholder=\"Confirm Password\" class=\"inputfields\" type=\"text\" name=\"confirmPassword\" [(ngModel)]=\"user.confirmPassword\" #confirmPassword required minlength=\"4\"><br>\n        <input class=\"inputfields\" id=\"registerButton\" type=\"submit\" value=\"Register\">\n      </form>\n      <h3>Already have an account? <a [routerLink]=\"['login']\">Log In Here!</a></h3>\n  </div>\n</div>\n"
-=======
 module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n  </div>\n    <div id=\"registration\">\n      <h1 id=\"regTitle\">Register</h1>\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\n        <input placeholder=\"Username\" class=\"inputfields\" type=\"text\" name=\"username\" [(ngModel)]=\"user.username\" #username required minlength=\"2\"><br>\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\" [(ngModel)]=\"user.email\" #email required minlength=\"5\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\" [(ngModel)]=\"user.password\" #password required minlength=\"4\"><br>\n        <input placeholder=\"Confirm Password\" class=\"inputfields\" type=\"text\" name=\"confirmPassword\" [(ngModel)]=\"user.confirmPassword\" #confirmPassword required minlength=\"4\"><br>\n        <input class=\"inputfields\" id=\"registerButton\" type=\"submit\" value=\"Register\">\n      </form>\n      <h3>Already have an account? <a [routerLink]=\"['login']\">Log In Here!</a></h3>\n  </div>\n</div>\n"
->>>>>>> master
 
 /***/ }),
 
