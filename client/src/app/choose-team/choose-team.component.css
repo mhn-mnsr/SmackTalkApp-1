@@ -12,21 +12,33 @@
 }
 
 #headerbar{
-    height: 100px;
-    padding-top: 20px;
+    height: 90px;
+    /* padding-top: 20px; */
     width: auto;
 }
 
 #logo{
     height: 100px;
     width: 210px;
-    background-color: white;
+    background-color: #282946;
     background-image: url(../landing/static/smacktestlogo.png);
     background-size: cover;
     border-radius: 40px;
     opacity: .95;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin: 20px 0px 30px 20px;
+    border: none;
     
+}
+
+#logoutLink{
+    vertical-align: top;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
 }
 
 #buttonContainer{
@@ -35,7 +47,7 @@
     margin: 0px auto;
 }
 h1{
-    margin: 0px 393px 30px;
+    text-align: center;
     font-size: 40px;
     font-family: 'Open Sans', sans-serif;    
     color: #282946;   
