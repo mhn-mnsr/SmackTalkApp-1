@@ -1,21 +1,41 @@
-#container{
-    background-color: #BEBEBE;
-    height: 1100px;
-    width: 1100px;
-
+#backgroundimg{
+    /* -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px); */
+    background-image: url(./static/smacktalkerspic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+#container{
+    /* height: 1100px;
+    /* width: 1100px; */
+    /* background-image: url(./static/smacktalkerspic.jpg);
+    background-repeat: no-repeat; */
+    
+}
+
 
 #logo{
-    background-color: lightgray;
-    height: 250px;
+    height: 300px;
     width: 700px;
     margin: 0px auto;
+    background-color: white;
+    background-image: url(./static/smacktestlogo.png);
+    background-size: cover;
+    border-radius: 40px;
+    opacity: .95;
 }
+
 
 #loginRegBox{
     width: 700px;
     height: 600px;
     margin: 80px auto 0px;
-    background-color: #B6B6B6;
-    box-shadow: 7px 7px gray;
+    background-color: #FFFFFF;
+    opacity: .95;
+    border-radius: 40px;
+    /* box-shadow: 7px 7px gray; */
 }

@@ -12,6 +12,7 @@ import { RegisterComponent } from './landing/register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import { CreateTeamComponent } from './/choose-team/create-team/create-team.component';
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ChooseTeamComponent } from './choose-team/choose-team.component';
     RegisterComponent,
     LandingComponent,
     CreateTeamComponent,
-    ChooseTeamComponent
+    ChooseTeamComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

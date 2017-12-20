@@ -17,4 +17,9 @@ module.exports = function (app) {
         teamController.getAllUsers(req, res);
     });
 
+    app.post('/api/loginUser', function(req, res){
+        controller.loginUser(req, res);
+        console.log("===In routes/ made it to loginUser===")
+    })
+
 };

@@ -5,6 +5,8 @@ import { RegisterComponent } from './landing/register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import { CreateTeamComponent } from './choose-team/create-team/create-team.component';
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
+import { HomeComponent } from './home/home.component';
+
 
 
 const routes: Routes = [
@@ -26,7 +28,12 @@ const routes: Routes = [
         children: [],
       }
     ],
-  }
+    {
+    path: 'home',
+    pathMatch: 'full',
+    component: HomeComponent,
+    children: [],
+  },
 ];
 // export const routing = RouterModule.forRoot(routes);
 
