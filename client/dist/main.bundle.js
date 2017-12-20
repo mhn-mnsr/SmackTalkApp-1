@@ -27,7 +27,10 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__landing_login_login_component__ = __webpack_require__("../../../../../src/app/landing/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__choose_team_create_team_create_team_component__ = __webpack_require__("../../../../../src/app/choose-team/create-team/create-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__choose_team_choose_team_component__ = __webpack_require__("../../../../../src/app/choose-team/choose-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__join_team_join_team_component__ = __webpack_require__("../../../../../src/app/join-team/join-team.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,28 +42,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// import { SuccessComponent } from './success/success.component';
+
+
+
 
 var routes = [
-    { path: '',
-        component: __WEBPACK_IMPORTED_MODULE_4__landing_landing_component__["a" /* LandingComponent */],
-        children: [
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_4__landing_landing_component__["a" /* LandingComponent */], children: [
             { path: '', component: __WEBPACK_IMPORTED_MODULE_3__landing_register_register_component__["a" /* RegisterComponent */] },
             { path: 'login', component: __WEBPACK_IMPORTED_MODULE_2__landing_login_login_component__["a" /* LoginComponent */] },
-        ]
-    },
-    // {
-    //   path: 'success',
-    //   pathMatch: 'full',
-    //   component: SuccessComponent,
-    //   children: [],
-    // },
-    {
-        path: 'home',
-        pathMatch: 'full',
-        component: __WEBPACK_IMPORTED_MODULE_5__home_home_component__["a" /* HomeComponent */],
-        children: [],
-    },
+        ] },
+    { path: 'chooseTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_6__choose_team_choose_team_component__["a" /* ChooseTeamComponent */] },
+    { path: 'createTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_5__choose_team_create_team_create_team_component__["a" /* CreateTeamComponent */] },
+    { path: 'joinTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_8__join_team_join_team_component__["a" /* JoinTeamComponent */] },
+    { path: 'home', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */] }
 ];
 // export const routing = RouterModule.forRoot(routes);
 var AppRoutingModule = (function () {
@@ -68,8 +62,8 @@ var AppRoutingModule = (function () {
     }
     AppRoutingModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
-            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */].forRoot(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* RouterModule */]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
@@ -147,10 +141,13 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__landing_login_login_component__ = __webpack_require__("../../../../../src/app/landing/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__join_team_join_team_component__ = __webpack_require__("../../../../../src/app/join-team/join-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__landing_login_login_component__ = __webpack_require__("../../../../../src/app/landing/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__landing_register_register_component__ = __webpack_require__("../../../../../src/app/landing/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__landing_landing_component__ = __webpack_require__("../../../../../src/app/landing/landing.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__choose_team_create_team_create_team_component__ = __webpack_require__("../../../../../src/app/choose-team/create-team/create-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__choose_team_choose_team_component__ = __webpack_require__("../../../../../src/app/choose-team/choose-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -167,7 +164,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-// import { SuccessComponent } from './success/success.component';
+
+
+
 
 var AppModule = (function () {
     function AppModule() {
@@ -176,11 +175,13 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__landing_login_login_component__["a" /* LoginComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__landing_register_register_component__["a" /* RegisterComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__landing_landing_component__["a" /* LandingComponent */],
-                // SuccessComponent,
-                __WEBPACK_IMPORTED_MODULE_10__home_home_component__["a" /* HomeComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__landing_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__landing_register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__landing_landing_component__["a" /* LandingComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__choose_team_create_team_create_team_component__["a" /* CreateTeamComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__join_team_join_team_component__["a" /* JoinTeamComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__choose_team_choose_team_component__["a" /* ChooseTeamComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -193,6 +194,156 @@ var AppModule = (function () {
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/choose-team/choose-team.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#container{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    min-height: 1200px;\n    /* padding-top: 100px; */\n}\n\n#logo{\n    height: 200px;\n    width: 405px;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n    \n}\n\n#buttonContainer{\n    height: 800px;\n    width: 700px;\n    margin: 0px auto;\n}\n\nbutton{\n    font-size: 60px;\n    font-weight: 800;\n    color: #282946;    \n    letter-spacing: 12px;    \n    font-family: 'Open Sans', sans-serif;    \n    height: 300px;\n    width: 700px;\n    margin: 30px auto;\n    background-color: white;\n    /* background-image: url(./static/smacktestlogo.png); */\n    /* background-size: cover; */\n    border-radius: 40px;\n    opacity: .95;\n    \n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/choose-team/choose-team.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"container\">\n    <div id=\"logo\"></div>\n    <div id=\"buttonContainer\">\n        <button [routerLink]=\"['/createTeam']\">Create Team</button>\n        <button [routerLink]=\"['/joinTeam']\">Join Team</button>\n    </div>\n</div>\n  \n  \n  "
+
+/***/ }),
+
+/***/ "../../../../../src/app/choose-team/choose-team.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChooseTeamComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ChooseTeamComponent = (function () {
+    function ChooseTeamComponent(_dataService, _route, _router) {
+        this._dataService = _dataService;
+        this._route = _route;
+        this._router = _router;
+    }
+    ChooseTeamComponent.prototype.ngOnInit = function () {
+    };
+    ChooseTeamComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-choose-team',
+            template: __webpack_require__("../../../../../src/app/choose-team/choose-team.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/choose-team/choose-team.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+    ], ChooseTeamComponent);
+    return ChooseTeamComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/choose-team/create-team/create-team.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "div{\n    display: inline-block;\n    vertical-align: top;\n    margin: 25px;\n} \n\nbutton {\n    display: block;\n}\nfieldset {\n    width: 150px;\n}\n\nli {\n    list-style: none;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/choose-team/create-team/create-team.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n\n  <div>\n    <fieldset>\n      <legend>Invite friends to join your new team</legend>\n      <button *ngFor=\"let user of allUsers, let idx = index\">{{ user.username }}</button>\n    </fieldset>\n  </div>\n\n  <div>\n    <fieldset>\n      <legend>Team Name</legend>\n      <input type=\"text\" name=\"teamName\" >\n    </fieldset>\n  </div>\n\n  <div>\n    <fieldset>\n      <legend>Write a description of your Team</legend>\n      <textarea name=\"teamDesc\" cols=\"30\" rows=\"10\"></textarea>\n    </fieldset>\n  </div>\n\n\n  <div>\n    <fieldset>\n      <legend>New Team Members</legend>\n      <ul>\n        <li>User 1</li>\n        <li>User 4</li>\n      </ul>\n    </fieldset>\n  </div>\n\n    <br><br>\n<button (click)=\"createTeam()\">Create Team</button>\n\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/choose-team/create-team/create-team.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateTeamComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CreateTeamComponent = (function () {
+    function CreateTeamComponent(_dataService, _route, _router) {
+        this._dataService = _dataService;
+        this._route = _route;
+        this._router = _router;
+    }
+    CreateTeamComponent.prototype.ngOnInit = function () {
+        this.getAllUsers();
+    };
+    CreateTeamComponent.prototype.createTeam = function () {
+        console.log('Create team button clicked.');
+    };
+    CreateTeamComponent.prototype.getAllUsers = function () {
+        var _this = this;
+        this._dataService.getAllUsers()
+            .then(function (response) {
+            _this.allUsers = response.userKey;
+            console.log('Returned all users from db', _this.allUsers);
+        });
+    };
+    CreateTeamComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-create-team',
+            template: __webpack_require__("../../../../../src/app/choose-team/create-team/create-team.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/choose-team/create-team/create-team.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+    ], CreateTeamComponent);
+    return CreateTeamComponent;
 }());
 
 
@@ -229,6 +380,12 @@ var DataService = (function () {
     DataService.prototype.addUser = function (newUser) {
         return this._http.post('/api/registerUser', newUser)
             .map(function (data) { return data.json(); })
+            .toPromise();
+    };
+    DataService.prototype.getAllUsers = function () {
+        console.log('reached the getAllUsers function in service.ts file');
+        return this._http.get('/api/getAllUsers')
+            .map(function (response) { return response.json(); })
             .toPromise();
     };
     DataService.prototype.login = function (user) {
@@ -268,7 +425,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  home works!\n</p>\n"
+module.exports = "<h1>Home</h1>\n\n<a [routerLink]=\"['/chooseTeam']\">Go to chooseTeam page</a>\n\n"
 
 /***/ }),
 
@@ -302,6 +459,67 @@ var HomeComponent = (function () {
         __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/join-team/join-team.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/join-team/join-team.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h1>Hello this is some html for join-team component</h1>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/join-team/join-team.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JoinTeamComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var JoinTeamComponent = (function () {
+    function JoinTeamComponent() {
+    }
+    JoinTeamComponent.prototype.ngOnInit = function () {
+    };
+    JoinTeamComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-join-team',
+            template: __webpack_require__("../../../../../src/app/join-team/join-team.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/join-team/join-team.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], JoinTeamComponent);
+    return JoinTeamComponent;
 }());
 
 
@@ -390,7 +608,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/landing/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginBox\">\n    <div id=\"login\">\n      <h1 id=\"logTitle\">Login</h1>\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\" [(ngModel)]=\"user.email\" #email=\"ngModel\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\" [(ngModel)]=\"user.password\" #password=\"ngModel\"><br>\n        <input class=\"inputfields\" id=\"loginButton\" type=\"submit\" value=\"Login\">\n      </form>\n      <h3>Don't have an account? <a [routerLink]=\"['']\">Register here!</a></h3>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div id=\"container\">\n  <div id=\"logo\">\n\n  </div>\n  <div id=\"loginBox\">\n    <div id=\"login\">\n      <h1 id=\"logTitle\">Login</h1>\n      <form class=\"inputs\" (submit)=\"onSubmit()\">\n        <input placeholder=\"Email Address\" class=\"inputfields\" type=\"text\" name=\"email\" [(ngModel)]=\"user.email\" #email=\"ngModel\"><br>\n        <input placeholder=\"Password\" class=\"inputfields\" type=\"text\" name=\"password\" [(ngModel)]=\"user.password\" #password=\"ngModel\"><br>\n        <input class=\"inputfields\" id=\"loginButton\" type=\"submit\" value=\"Login\">\n      </form>\n      <h3>Don't have an account? <a [routerLink]=\"['']\">Register here!</a></h3>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -441,7 +659,7 @@ var LoginComponent = (function () {
             template: __webpack_require__("../../../../../src/app/landing/login/login.component.html"),
             styles: [__webpack_require__("../../../../../src/app/landing/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]])
     ], LoginComponent);
     return LoginComponent;
 }());
@@ -512,7 +730,7 @@ var RegisterComponent = (function () {
                 console.log(data.error);
             }
             else {
-                _this._router.navigateByUrl('success');
+                _this._router.navigateByUrl('chooseTeam');
             }
         });
     };
@@ -522,7 +740,7 @@ var RegisterComponent = (function () {
             template: __webpack_require__("../../../../../src/app/landing/register/register.component.html"),
             styles: [__webpack_require__("../../../../../src/app/landing/register/register.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]])
     ], RegisterComponent);
     return RegisterComponent;
 }());

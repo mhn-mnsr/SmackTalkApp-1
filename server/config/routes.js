@@ -13,7 +13,7 @@ module.exports = function (app) {
     });
 
     app.post('/api/loginUser', function(req, res){
-        controller.loginUser(req, res);
+        loginController.loginUser(req, res);
         console.log("===In routes/ made it to loginUser===")
     })
 

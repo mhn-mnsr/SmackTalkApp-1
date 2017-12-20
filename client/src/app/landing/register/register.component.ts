@@ -21,7 +21,11 @@ export class RegisterComponent implements OnInit {
       if(data.error){
         console.log(data.error)
       } else {
+<<<<<<< HEAD
         this._router.navigateByUrl('success');
+=======
+        this._router.navigateByUrl('chooseTeam');
+>>>>>>> master
       }
     })
   }
