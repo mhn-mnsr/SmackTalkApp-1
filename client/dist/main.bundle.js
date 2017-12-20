@@ -208,7 +208,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#container{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    min-height: 1200px;\n    /* padding-top: 100px; */\n}\n\n#headerbar{\n    height: 100px;\n    padding-top: 20px;\n    width: auto;\n}\n\n#logo{\n    height: 100px;\n    width: 210px;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n    margin-left: 20px;\n    \n}\n\n#buttonContainer{\n    height: 400px;\n    width: 500px;\n    margin: 0px auto;\n}\nh1{\n    margin: 0px 393px 30px;\n    font-size: 40px;\n    font-family: 'Open Sans', sans-serif;    \n    color: #282946;   \n}\n\n.buttonTitle{\n    color: #282946;   \n    font-size: 30px;\n    font-family: 'Open Sans', sans-serif;    \n    \n}\np{\n    color: #282946;   \n    font-size: 20px;\n    font-weight: 250;\n    font-family: 'Open Sans', sans-serif;        \n}\n\nbutton{\n    color: #282946;       \n    height: 200px;\n    width: 500px;\n    margin: 30px auto;\n    background-color: white;\n    /* background-image: url(./static/smacktestlogo.png); */\n    /* background-size: cover; */\n    border-radius: 40px;\n    opacity: .95;\n    \n}", ""]);
+exports.push([module.i, "#container{\n    /* -webkit-filter: blur(5px);\n    -moz-filter: blur(5px);\n    -o-filter: blur(5px);\n    -ms-filter: blur(5px);\n    filter: blur(5px); */\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktalkerspic.jpg") + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    min-height: 1200px;\n    /* padding-top: 100px; */\n}\n\n#headerbar{\n    height: 100px;\n    padding-top: 20px;\n    width: auto;\n}\n\n#logo{\n    height: 100px;\n    width: 210px;\n    background-color: white;\n    background-image: url(" + __webpack_require__("../../../../../src/app/landing/static/smacktestlogo.png") + ");\n    background-size: cover;\n    border-radius: 40px;\n    opacity: .95;\n    margin-left: 20px;\n    \n}\n\n#buttonContainer{\n    height: 400px;\n    width: 500px;\n    margin: 0px auto;\n}\nh1{\n    margin: 0px 393px 30px;\n    font-size: 40px;\n    font-family: 'Open Sans', sans-serif;    \n    color: #282946;   \n}\n\n.buttonTitle{\n    color: #282946;   \n    font-size: 30px;\n    font-family: 'Open Sans', sans-serif;    \n    \n}\np{\n    color: #282946;   \n    font-size: 20px;\n    font-weight: 250;\n    font-family: 'Open Sans', sans-serif;        \n}\n\nbutton{\n    color: #282946;     \n    height: 200px;\n    width: 500px;\n    margin: 30px auto;\n    background-color: white;\n    /* background-image: url(./static/smacktestlogo.png); */\n    /* background-size: cover; */\n    border-radius: 40px;\n    opacity: .95;\n    \n}", ""]);
 
 // exports
 
@@ -412,7 +412,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "#container{\n    height: 1200px;\n    width: auto;\n    background-color: cornsilk;\n}\n\n#topBar{\n    height: 100px;\n    width: auto;\n    background-color: white;\n}\n\n#leftbar{\n    height: 1200px;\n    width: 300px;\n    background-color: #282946;\n}\n\n\n#mainArea{\n    height: 1000px;\n    width: 800px;\n    background-color: silver;\n}", ""]);
 
 // exports
 
@@ -425,7 +425,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Home</h1>\n\n<a [routerLink]=\"['/chooseTeam']\">Go to chooseTeam page</a>\n\n"
+module.exports = "<div id=\"container\">\n    <div id=\"topBar\">\n            <a [routerLink]=\"['/chooseTeam']\">Go to chooseTeam page</a>\n    </div>\n    <div id=\"leftBar\">\n        <h1 id=\"teamName\">Team Name</h1>\n    </div>\n    <div id=\"mainArea\">\n        <div id=\"writeMessage\">\n\n        </div>\n    </div>\n</div>\n\n"
 
 /***/ }),
 
