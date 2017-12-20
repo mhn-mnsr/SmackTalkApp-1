@@ -10,7 +10,6 @@ app.use(bodyParser.json())
 app.use(express.static(__dirname + '/client/dist'));
 app.use(session({secret: 'codingdojorocks'}));
 
-
 require('./server/config/dbConnector.js');
 
 var routes_setter = require('./server/config/routes.js');
