@@ -6,16 +6,12 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-
+import { JoinTeamComponent } from './join-team/join-team.component';
 import { LoginComponent } from './landing/login/login.component';
 import { RegisterComponent } from './landing/register/register.component';
 import { LandingComponent } from './landing/landing.component';
-<<<<<<< HEAD
-// import { SuccessComponent } from './success/success.component';
-=======
 import { CreateTeamComponent } from './/choose-team/create-team/create-team.component';
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
->>>>>>> 379781b82c9e6f6e7a952fbbbb54459f1ec1186b
 import { HomeComponent } from './home/home.component';
 
 
@@ -25,12 +21,9 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     RegisterComponent,
     LandingComponent,
-<<<<<<< HEAD
-    // SuccessComponent,
-=======
     CreateTeamComponent,
+    JoinTeamComponent,
     ChooseTeamComponent,
->>>>>>> 379781b82c9e6f6e7a952fbbbb54459f1ec1186b
     HomeComponent
   ],
   imports: [

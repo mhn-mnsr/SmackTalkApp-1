@@ -21,7 +21,7 @@ export class RegisterComponent implements OnInit {
       if(data.error){
         console.log(data.error)
       } else {
-        this._router.navigateByUrl('createTeam');
+        this._router.navigateByUrl('chooseTeam');
       }
     })
   }
