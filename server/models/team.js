@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 var bcrypt = require('bcrypt');
 var teamSession = require('express-session');
+var Schema = mongoose.Schema;
 
 var TeamSchema = new mongoose.Schema({
     teamName: String,
@@ -11,5 +12,5 @@ var TeamSchema = new mongoose.Schema({
 })
 
 mongoose.model('Team', TeamSchema);
-mongoose.model("User", UserSchema);
+
 var Team = mongoose.model('Team');

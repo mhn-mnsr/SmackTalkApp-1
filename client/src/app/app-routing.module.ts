@@ -10,31 +10,28 @@ import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: '',
-    component: LandingComponent,
-    children: [  
+  {
+    path: '', component: LandingComponent, children: [
       { path: '', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
     ]
   },
   {
-    path: 'chooseTeam',
-    component: ChooseTeamComponent,
-    children: [
-      {
-        path: 'createTeam',
-        pathMatch: 'full',
-        component: CreateTeamComponent,
-        children: [],
-      }
-    ],
-    {
     path: 'home',
     pathMatch: 'full',
     component: HomeComponent,
     children: [],
   },
+  {
+    path: 'chooseTeam',
+    component: ChooseTeamComponent,
+    children: [
+      { path: 'createTeam', pathMatch: 'full', component: CreateTeamComponent },
+      { path: 'home', pathMatch: 'full', component: HomeComponent }]
+  }
 ];
+
+
 // export const routing = RouterModule.forRoot(routes);
 
 @NgModule({
