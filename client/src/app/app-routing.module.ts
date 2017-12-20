@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '',
     component: LandingComponent,
-    children: [
+    children: [  
       { path: '', component: RegisterComponent },
       { path: 'login', component: LoginComponent },
     ]
