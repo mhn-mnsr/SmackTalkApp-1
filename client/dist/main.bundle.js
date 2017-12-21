@@ -332,6 +332,7 @@ var CreateTeamComponent = (function () {
     CreateTeamComponent.prototype.createTeam = function () {
         console.log('new team data', this.newTeam);
         this._dataService.createTeam(this.newTeam);
+        this._router.navigateByUrl('home');
     };
     CreateTeamComponent.prototype.getAllUsers = function () {
         var _this = this;
