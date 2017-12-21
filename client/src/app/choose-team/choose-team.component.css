@@ -77,5 +77,10 @@ button{
     /* background-size: cover; */
     border-radius: 40px;
     opacity: .95;
-    
 }
+
+button:active{
+    background-color: #BBBBBB;
+    color: white;
+}
+
