@@ -6,6 +6,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class DataService {
+  sessionUsername;
 
   constructor(private _http: Http) { }
 
@@ -40,6 +41,17 @@ export class DataService {
     return this._http.post('/api/createTeam', newTeam)
     .map(data=> data.json())
     .toPromise();
+  }
+
+  getSessionid() {
+    console.log("====In data service, set sessionID====");
+    return this._http.get('/api/getOneUser')
+    .map(data => data.json())
+    .toPromise();
+  }
+
+  getUsersTeams() {
+    
   }
 
 }

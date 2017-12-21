@@ -1,12 +1,13 @@
 <div id="container">
     <div id="leftBar">
-        <h1 id="teamName">Team Name</h1>
+        <h1 id="teamName">{{ User.username }}</h1>
         <a href="" id="loggedUser">&#9679; adarbars</a>
         <br>
         <hr>
         <h3 class="leftBarTitles">Your Teams</h3>&nbsp;&nbsp; <button class="add">+</button>
-        <button class="leftBarOptions"># Cat Lovers</button>
-        <button class="leftBarOptions"># Pizza Family</button>
+        <ul>
+            <li class="leftBarOptions"># {{ User._teams }}</li>
+        </ul>
         <br>
         <h3 class="leftBarTitles">Teammates</h3>&nbsp;&nbsp; <button class="add">+</button>
         <p class="leftBarOptions">Bob</p>
