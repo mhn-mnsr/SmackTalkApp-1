@@ -57,7 +57,7 @@ module.exports = {
                 .then(function (matchedPassword) {
                     console.log("====in controller/loginUser, passwords match====");
                     req.session.user = regUser._id;
-                    res.json({good: "New user created successfully"})
+                    res.json({good: "New user logged in successfully"})
                 })
                 .catch(function (errors, notMatched) {
                     console.log("===in contoller/loginUser, emails dont match====");

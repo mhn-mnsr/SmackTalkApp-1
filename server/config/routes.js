@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var loginController = require('../controllers/loginController.js');
 var teamController = require('../controllers/teamController.js');
+var homeController = require('../controllers/homeController.js');
+
 module.exports = function (app) {
 
     // ROUTES//
@@ -24,6 +26,11 @@ module.exports = function (app) {
     
     app.get('/api/getAllTeams', function (req, res) {
         teamController.getAllTeams(req,res);
+    });
+    
+    app.get('/api/getOneUser', function (req, res) {
+        console.log("===In routes/ made it to getOneUser===");
+        homeController.getOneUser(req,res);
     });
     
     app.post('/api/createTeam', function(req, res){
