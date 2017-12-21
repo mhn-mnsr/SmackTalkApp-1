@@ -65,7 +65,15 @@
     overflow: scroll;
 }
 .listedTeam{
-    padding-left: 10px;
+    padding-left: 14px;
+    padding-top: 4px;
+    margin-top: 4px;
+    display: block;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 18px;
+    color: #282946;
 }
 
 #searchContainer{

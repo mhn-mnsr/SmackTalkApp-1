@@ -10,7 +10,7 @@
         <input id="searchBox" [(ngModel)]="searchText">
     </div>
     <div id="displayTeams">
-        <button class="listedTeam" *ngFor="let t of team | filterPipe: searchText">{{ t }}</button>
+        <button (click)="joinTeam(selectedTeam)" class="listedTeam" *ngFor="let team of allTeams, let selectedTeam of index| filterPipe: searchText">&#x2b; {{ team.teamName }}</button>
     </div>
 
 </div>

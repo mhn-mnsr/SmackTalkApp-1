@@ -38,7 +38,14 @@ export class DataService {
   createTeam(newTeam) {
     console.log('Hello from createTeam in dataService!');
     return this._http.post('/api/createTeam', newTeam)
-    .map(data=> data.json())
+    .map(data => data.json())
+    .toPromise();
+  }
+
+  joinTeam(selectedTeam) {
+    console.log('Hello from joinTeam in dataService!');
+    return this._http.post('/api/joinTeam', selectedTeam)
+    .map(data => data.json())
     .toPromise();
   }
 
