@@ -1,10 +1,28 @@
 <div id="container">
     <div id="leftBar">
         <h1 id="teamName">Team Name</h1>
+        <a href="" id="loggedUser">&#9679; adarbars</a>
+        <br>
+        <hr>
+        <h3 class="leftBarTitles">Your Teams</h3>&nbsp;&nbsp; <button class="add">+</button>
+        <button class="leftBarOptions"># Cat Lovers</button>
+        <button class="leftBarOptions"># Pizza Family</button>
+        <br>
+        <h3 class="leftBarTitles">Teammates</h3>&nbsp;&nbsp; <button class="add">+</button>
+        <p class="leftBarOptions">Bob</p>
+        <p class="leftBarOptions">Sarah</p>
+        <br>
+        <button id="inviteButton"><span id="invitePlus">+ </span>Invite People</button>
+        <br>
+        <br>
+        <button id="chooseTeamPage" [routerLink]="['/chooseTeam']"><span id="invitePlus">+ </span>Create or Join Team</button>
     </div>
     <div id="mainArea">
         <div id="topBar">
-            <a [routerLink]="['/chooseTeam']">Go to chooseTeam page</a>
+        </div>
+        <div id="messageContainer">
+            <input type="text" id="messageBox">
+            <input id="sendButton" type="submit" value="Send">
         </div>
     </div>
 </div>
