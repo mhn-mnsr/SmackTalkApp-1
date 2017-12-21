@@ -1,1 +1,7 @@
 <h1>Hello this is some html for join-team component</h1>
+<div>
+    <input [(ngModel)]="searchText">
+    <div *ngFor="let t of team | filterPipe: searchText">
+        {{ t }}
+    </div>
+</div>

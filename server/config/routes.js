@@ -19,7 +19,16 @@ module.exports = function (app) {
 
     app.post('/api/loginUser', function(req, res){
         loginController.loginUser(req, res);
-        console.log("===In routes/ made it to loginUser===")
+        console.log("===In routes/ made it to loginUser===");
+    });
+    
+    app.get('/api/getAllTeams', function (req, res) {
+        teamController.getAllTeams(req,res);
+    });
+    
+    app.post('/api/createTeam', function(req, res){
+        console.log('Made it to the createTeam route!');
+        teamController.createTeam(req, res);
     })
-
+    
 };

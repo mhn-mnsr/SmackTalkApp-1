@@ -18,15 +18,27 @@ export class DataService {
   getAllUsers() {
     console.log('reached the getAllUsers function in service.ts file');
     return this._http.get('/api/getAllUsers')
-    .map(response => response.json())
+    .map(data => data.json())
     .toPromise();
   }
-
-
 
   login(user){
     return this._http.post('/api/loginUser', user)
     .map(data => data.json())
+    .toPromise();
+  }
+
+  getAllTeams() {
+    console.log("====In data service, get all teams====");
+    return this._http.get('/api/getAllTeams')
+    .map(data => data.json())
+    .toPromise();
+  }
+
+  createTeam(newTeam) {
+    console.log('Hello from createTeam in dataService!');
+    return this._http.post('/api/createTeam', newTeam)
+    .map(data=> data.json())
     .toPromise();
   }
 
