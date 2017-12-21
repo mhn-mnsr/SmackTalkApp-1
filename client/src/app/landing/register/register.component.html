@@ -3,12 +3,16 @@
   </div>
     <div id="registration">
       <h1 id="regTitle">Register</h1>
-      <form class="inputs" (submit)="onSubmit()">
-        <input placeholder="Username" class="inputfields" type="text" name="username" [(ngModel)]="user.username" #username required minlength="2"><br>
-        <input placeholder="Email Address" class="inputfields" type="text" name="email" [(ngModel)]="user.email" #email required minlength="5"><br>
-        <input placeholder="Password" class="inputfields" type="text" name="password" [(ngModel)]="user.password" #password required minlength="4"><br>
-        <input placeholder="Confirm Password" class="inputfields" type="text" name="confirmPassword" [(ngModel)]="user.confirmPassword" #confirmPassword required minlength="4"><br>
-        <input class="inputfields" id="registerButton" type="submit" value="Register">
+      <form class="inputs" (submit)="onSubmit()" #formData="ngForm">
+          <span class="error" *ngIf="username.valid != true && !username.pristine">&#x274C;</span>
+        <input placeholder="Username" class="inputfields" type="text" name="username" [(ngModel)]="user.username" #username="ngModel" required minlength="2"><br>        
+          <span class="error" *ngIf="email.valid != true && !email.pristine">&#x274C;</span>
+        <input placeholder="Email Address" class="inputfields" type="text" name="email" [(ngModel)]="user.email" #email="ngModel" required minlength="5"><br>
+          <span class="error" *ngIf="password.valid != true && !password.pristine">&#x274C;</span>
+        <input placeholder="Password" class="inputfields" type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required minlength="4"><br>
+          <span class="error" *ngIf="confirmPassword.valid != true && !confirmPassword.pristine">&#x274C;</span>
+        <input placeholder="Confirm Password" class="inputfields" type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword" #confirmPassword="ngModel" required minlength="4"><br>
+        <input class="inputfields" id="registerButton" type="submit" value="Register" [disabled]="!formData.valid">
       </form>
       <h3>Already using Smack Talk? <a [routerLink]="['login']">Sign in.</a></h3>
   </div>

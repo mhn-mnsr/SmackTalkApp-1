@@ -1,24 +1,37 @@
 #container{
-    height: 1200px;
-    width: auto;
-    background-color: cornsilk;
+    /* height: auto;
+    width: auto; */
+    background-color: #FFD1D1;
+    height: 850px;
+    width: 1000px;
+    position: fixed;
 }
 
 #topBar{
-    height: 100px;
-    width: auto;
-    background-color: white;
+    display: inline-block;
+    height: 40px;
+    width: 850vh;
+    background-color: #FFFCF1;
+    position: relative;
+}
+#teamName{
+    color: white;
 }
 
-#leftbar{
-    height: 1200px;
-    width: 300px;
+#leftBar{
+    vertical-align: top;
+    text-align: center;
+    display: inline-block;
+    height: 900vh;
+    width: 230px;
     background-color: #282946;
 }
 
 
 #mainArea{
-    height: 1000px;
-    width: 800px;
-    background-color: silver;
+    display: inline-block;
+    height: 900vh;
+    width: 900vh;
+    background-color: #E7E7E7;
+    position: fixed;
 }
