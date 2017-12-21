@@ -13,6 +13,7 @@ import { LandingComponent } from './landing/landing.component';
 import { CreateTeamComponent } from './/choose-team/create-team/create-team.component';
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
 import { HomeComponent } from './home/home.component';
+import { FilterPipePipe } from './filter-pipe.pipe';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     CreateTeamComponent,
     JoinTeamComponent,
     ChooseTeamComponent,
-    HomeComponent
+    HomeComponent,
+    FilterPipePipe
   ],
   imports: [
     BrowserModule,

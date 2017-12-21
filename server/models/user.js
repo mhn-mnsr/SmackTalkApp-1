@@ -41,7 +41,7 @@ var UserSchema = new mongoose.Schema({
         type: String,
         // required: [true, 'bio cannot be blank']
     },
-    teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }]
+    _teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }]
 
   }, {timestamps: true});
 

@@ -15,4 +15,5 @@ export class ChooseTeamComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

@@ -54,7 +54,7 @@ var routes = [
     { path: 'chooseTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_6__choose_team_choose_team_component__["a" /* ChooseTeamComponent */] },
     { path: 'createTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_5__choose_team_create_team_create_team_component__["a" /* CreateTeamComponent */] },
     { path: 'joinTeam', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_8__join_team_join_team_component__["a" /* JoinTeamComponent */] },
-    { path: 'home', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */] }
+    { path: 'home', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_7__home_home_component__["a" /* HomeComponent */] },
 ];
 // export const routing = RouterModule.forRoot(routes);
 var AppRoutingModule = (function () {
@@ -148,12 +148,14 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__choose_team_create_team_create_team_component__ = __webpack_require__("../../../../../src/app/choose-team/create-team/create-team.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__choose_team_choose_team_component__ = __webpack_require__("../../../../../src/app/choose-team/choose-team.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__filter_pipe_pipe__ = __webpack_require__("../../../../../src/app/filter-pipe.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -181,7 +183,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__choose_team_create_team_create_team_component__["a" /* CreateTeamComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__join_team_join_team_component__["a" /* JoinTeamComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__choose_team_choose_team_component__["a" /* ChooseTeamComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */]
+                __WEBPACK_IMPORTED_MODULE_13__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__filter_pipe_pipe__["a" /* FilterPipePipe */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -290,7 +293,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/choose-team/create-team/create-team.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n\n  <div>\n    <fieldset>\n      <legend>Invite friends to join your new team</legend>\n      <button *ngFor=\"let user of allUsers, let idx = index\">{{ user.username }}</button>\n    </fieldset>\n  </div>\n\n  <div>\n    <fieldset>\n      <legend>Team Name</legend>\n      <input type=\"text\" name=\"teamName\" >\n    </fieldset>\n  </div>\n\n  <div>\n    <fieldset>\n      <legend>Write a description of your Team</legend>\n      <textarea name=\"teamDesc\" cols=\"30\" rows=\"10\"></textarea>\n    </fieldset>\n  </div>\n\n\n  <div>\n    <fieldset>\n      <legend>New Team Members</legend>\n      <ul>\n        <li>User 1</li>\n        <li>User 4</li>\n      </ul>\n    </fieldset>\n  </div>\n\n    <br><br>\n<button (click)=\"createTeam()\">Create Team</button>\n\n</div>"
+module.exports = "<div>\n\n  <div>\n    <fieldset>\n      <legend>Invite friends to join your new team</legend>\n      <button *ngFor=\"let user of allUsers, let idx = index\" (click)=\"selectTeamMember(idx)\">{{ user.username }}</button>\n    </fieldset>\n  </div>\n\n  <div>\n    <fieldset>\n      <legend>Team Name</legend>\n      <input \n      type=\"text\" \n      [(ngModel)]=\"newTeam.teamName\"\n      name=\"teamName\" \n      required\n      minlength=\"2\"\n      >\n    </fieldset>\n  </div>\n\n  <div>\n    <fieldset>\n      <legend>Write a description of your Team</legend>\n      <textarea \n      name=\"description\" \n      [(ngModel)]=\"newTeam.description\"\n      cols=\"30\" \n      rows=\"10\"\n      ></textarea>\n    </fieldset>\n  </div>\n\n\n  <div>\n    <fieldset>\n      <legend>New Team Members</legend>\n      <ul>\n        <button \n        *ngFor=\"let selectedTeamMember of selectedUsers, let idx = index\" \n        name=\"members\"\n        (click)=\"unselectTeamMember(idx)\"\n        [(ngModel)]=\"newTeam.members\"\n        ngDefaultControl\n        >{{ selectedTeamMember.username }}</button>\n      </ul>\n    </fieldset>\n  </div>\n\n    <br><br>\n<button (click)=\"createTeam()\">Create Team</button>\n\n</div>"
 
 /***/ }),
 
@@ -320,12 +323,15 @@ var CreateTeamComponent = (function () {
         this._dataService = _dataService;
         this._route = _route;
         this._router = _router;
+        this.selectedUsers = [];
+        this.newTeam = { 'teamName': '', 'description': '', 'members': this.selectedUsers };
     }
     CreateTeamComponent.prototype.ngOnInit = function () {
         this.getAllUsers();
     };
     CreateTeamComponent.prototype.createTeam = function () {
-        console.log('Create team button clicked.');
+        console.log('new team data', this.newTeam);
+        this._dataService.createTeam(this.newTeam);
     };
     CreateTeamComponent.prototype.getAllUsers = function () {
         var _this = this;
@@ -334,6 +340,14 @@ var CreateTeamComponent = (function () {
             _this.allUsers = response.userKey;
             console.log('Returned all users from db', _this.allUsers);
         });
+    };
+    CreateTeamComponent.prototype.selectTeamMember = function (idx) {
+        this.selectedUsers.push(this.allUsers[idx]);
+        this.allUsers.splice(idx, 1);
+    };
+    CreateTeamComponent.prototype.unselectTeamMember = function (idx) {
+        this.selectedUsers.splice(idx, 1);
+        this.allUsers.push(this.selectedUsers[idx]);
     };
     CreateTeamComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -385,11 +399,23 @@ var DataService = (function () {
     DataService.prototype.getAllUsers = function () {
         console.log('reached the getAllUsers function in service.ts file');
         return this._http.get('/api/getAllUsers')
-            .map(function (response) { return response.json(); })
+            .map(function (data) { return data.json(); })
             .toPromise();
     };
     DataService.prototype.login = function (user) {
         return this._http.post('/api/loginUser', user)
+            .map(function (data) { return data.json(); })
+            .toPromise();
+    };
+    DataService.prototype.getAllTeams = function () {
+        console.log("====In data service, get all teams====");
+        return this._http.get('/api/getAllTeams')
+            .map(function (data) { return data.json(); })
+            .toPromise();
+    };
+    DataService.prototype.createTeam = function (newTeam) {
+        console.log('Hello from createTeam in dataService!');
+        return this._http.post('/api/createTeam', newTeam)
             .map(function (data) { return data.json(); })
             .toPromise();
     };
@@ -398,6 +424,48 @@ var DataService = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
     ], DataService);
     return DataService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/filter-pipe.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterPipePipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var FilterPipePipe = (function () {
+    function FilterPipePipe() {
+    }
+    // transform(value, keys: string, term: string) {
+    //   if (!term) return value;
+    //   return (value || []).filter((item) => keys.split(',').some(key => item.hasOwnProperty(key) && new RegExp(term, 'gi').test(item[key])));
+    // }
+    FilterPipePipe.prototype.transform = function (items, searchText) {
+        if (!items)
+            return [];
+        if (!searchText)
+            return items;
+        searchText = searchText.toLowerCase();
+        return items.filter(function (it) {
+            return it.toLowerCase().includes(searchText);
+        });
+    };
+    FilterPipePipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Pipe */])({
+            name: 'filterPipe'
+        })
+    ], FilterPipePipe);
+    return FilterPipePipe;
 }());
 
 
@@ -486,7 +554,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/join-team/join-team.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>Hello this is some html for join-team component</h1>"
+module.exports = "<h1>Hello this is some html for join-team component</h1>\n<div>\n    <input [(ngModel)]=\"searchText\">\n    <div *ngFor=\"let t of team | filterPipe: searchText\">\n        {{ t }}\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -496,6 +564,7 @@ module.exports = "<h1>Hello this is some html for join-team component</h1>"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JoinTeamComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -506,10 +575,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var JoinTeamComponent = (function () {
-    function JoinTeamComponent() {
+    function JoinTeamComponent(_dataService) {
+        this._dataService = _dataService;
     }
     JoinTeamComponent.prototype.ngOnInit = function () {
+        this._dataService.getAllTeams();
     };
     JoinTeamComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -517,7 +589,7 @@ var JoinTeamComponent = (function () {
             template: __webpack_require__("../../../../../src/app/join-team/join-team.component.html"),
             styles: [__webpack_require__("../../../../../src/app/join-team/join-team.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]])
     ], JoinTeamComponent);
     return JoinTeamComponent;
 }());

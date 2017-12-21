@@ -3,21 +3,32 @@
   <div>
     <fieldset>
       <legend>Invite friends to join your new team</legend>
-      <button *ngFor="let user of allUsers, let idx = index">{{ user.username }}</button>
+      <button *ngFor="let user of allUsers, let idx = index" (click)="selectTeamMember(idx)">{{ user.username }}</button>
     </fieldset>
   </div>
 
   <div>
     <fieldset>
       <legend>Team Name</legend>
-      <input type="text" name="teamName" >
+      <input 
+      type="text" 
+      [(ngModel)]="newTeam.teamName"
+      name="teamName" 
+      required
+      minlength="2"
+      >
     </fieldset>
   </div>
 
   <div>
     <fieldset>
       <legend>Write a description of your Team</legend>
-      <textarea name="teamDesc" cols="30" rows="10"></textarea>
+      <textarea 
+      name="description" 
+      [(ngModel)]="newTeam.description"
+      cols="30" 
+      rows="10"
+      ></textarea>
     </fieldset>
   </div>
 
@@ -26,8 +37,13 @@
     <fieldset>
       <legend>New Team Members</legend>
       <ul>
-        <li>User 1</li>
-        <li>User 4</li>
+        <button 
+        *ngFor="let selectedTeamMember of selectedUsers, let idx = index" 
+        name="members"
+        (click)="unselectTeamMember(idx)"
+        [(ngModel)]="newTeam.members"
+        ngDefaultControl
+        >{{ selectedTeamMember.username }}</button>
       </ul>
     </fieldset>
   </div>

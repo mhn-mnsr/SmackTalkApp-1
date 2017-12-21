@@ -10,16 +10,18 @@ import { DataService } from '../../data.service';
 })
 export class CreateTeamComponent implements OnInit {
   allUsers;
+  selectedUsers: Array<any> = [];
+  newTeam: Object = {'teamName': '', 'description': '', 'members': this.selectedUsers};
 
   constructor(private _dataService: DataService, private _route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit() {
     this.getAllUsers();
-
   }
 
   createTeam() {
-    console.log('Create team button clicked.');
+    console.log('new team data', this.newTeam);
+    this._dataService.createTeam(this.newTeam);
   }
 
 
@@ -29,5 +31,15 @@ export class CreateTeamComponent implements OnInit {
       this.allUsers = response.userKey;
       console.log('Returned all users from db', this.allUsers);
     });
+  }
+
+  selectTeamMember(idx) {
+    this.selectedUsers.push(this.allUsers[idx]);
+    this.allUsers.splice(idx, 1);
+  }
+
+  unselectTeamMember(idx) {
+    this.selectedUsers.splice(idx, 1);
+    this.allUsers.push(this.selectedUsers[idx]);
   }
 }
