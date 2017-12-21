@@ -10,10 +10,8 @@
         <input id="searchBox" [(ngModel)]="searchText">
     </div>
     <div id="displayTeams">
-        <h2 class="listedTeam" *ngFor="let t of team | filterPipe: searchText">{{ t }}</h2>
+        <button class="listedTeam" *ngFor="let t of team | filterPipe: searchText">{{ t }}</button>
     </div>
-    <div id="joinButtonBox">
-        <button id="joinButton">Join</button>
-    </div>
+
 </div>
       

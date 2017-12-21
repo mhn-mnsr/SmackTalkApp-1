@@ -1,17 +1,151 @@
-div{
-    display: inline-block;
+*{
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+#container{
+    /* -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px); */
+    background-image: url(../../landing/static/smacktalkerspic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1200px;
+}
+
+#headerbar{
+    height: 90px;
+    width: auto;
+}
+
+#logo{
+    height: 100px;
+    width: 210px;
+    background-color: #282946;
+    background-image: url(../../landing/static/smacktestlogo.png);
+    background-size: cover;
+    border-radius: 40px;
+    opacity: .95;
+    margin: 20px 0px 30px 20px;
+    border: none;
+    
+}
+
+#logoutLink{
     vertical-align: top;
-    margin: 25px;
-} 
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 33px;
+    text-decoration: none;
+}
 
-button {
+#pickNameWrap{
+    height: 115px;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: #282946;   
+    width: auto;
+    margin-bottom: 20px;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: #282946;   
+    width: auto;
+}
+h3{
+    text-align: center;
+    font-size: 20px;
+    color: #282946;   
+    width: auto;
+}
+
+#teamNameField{
+    height: 40px;
+    width: 500px;
+    font-size: 40px;
+    font-weight: 10;  
+    letter-spacing: 1px;    
+    text-align: center;
+    margin: 0px auto;
+}
+
+#descriptionWrap{
+    height: 220px;
+    width: 505px;
+    margin: 20px auto;
+    text-align: center;
+}
+#descriptionField{
+    height: 100px;
+    width: 500px;
+    margin: 0px auto;
+    font-size: 30px;
+}
+#inviteSectionWrap{
+    height: 220px;
+    width: 820px;
+    margin: 0px auto;
+}
+
+#inviteWrap{
+    vertical-align: top;
+    display: inline-block;
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    opacity: .9;
+    margin: 0px auto;
+    border: 3px solid #282946;
+    overflow: scroll;
+}
+
+.invitee{
+    padding-left: 14px;
     display: block;
-}
-fieldset {
-    width: 150px;
-}
-
-li {
-    list-style: none;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 18px;
+    color: #282946;
 }
 
+#invitedWrap{
+    vertical-align: top;
+    display: inline-block;
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    opacity: .9;
+    margin: 0px auto;
+    border: 3px solid #282946;
+    overflow: scroll;
+}
+
+
+#createTeamButton{
+    height: 40px;
+    width: 180px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #282946;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#createTeamButton:active{
+    background-color: #282946;
+    color: white;
+}

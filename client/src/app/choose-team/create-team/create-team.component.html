@@ -1,53 +1,36 @@
-<div>
-  <div>
-    <fieldset>
-      <legend>Invite friends to join your new team</legend>
-      <button *ngFor="let user of allUsers, let idx = index" (click)="selectTeamMember(idx)">{{ user.username }}</button>
-    </fieldset>
+<div id="container">
+  <div id="headerbar">
+    <button [routerLink]="['/home']" id="logo"></button>
+    <a id="logoutLink" [routerLink]="['/']">Logout</a>
   </div>
+  
+  <h1>Tell us about your team.</h1>
 
-  <div>
-    <fieldset>
-      <legend>Team Name</legend>
-      <input 
-      type="text" 
-      [(ngModel)]="newTeam.teamName"
-      name="teamName" 
-      required
-      minlength="2"
-      >
-    </fieldset>
-  </div>
-
-  <div>
-    <fieldset>
-      <legend>Write a description of your Team</legend>
-      <textarea 
-      name="description" 
-      [(ngModel)]="newTeam.description"
-      cols="30" 
-      rows="10"
-      ></textarea>
-    </fieldset>
+  <div id="pickNameWrap">
+    <h2>Team name</h2>
+    <input id="teamNameField" type="text" [(ngModel)]="newTeam.teamName" name="teamName" required minlength="2">
   </div>
 
 
-  <div>
-    <fieldset>
-      <legend>New Team Members</legend>
-      <ul>
-        <button 
-        *ngFor="let selectedTeamMember of selectedUsers, let idx = index" 
-        name="members"
-        (click)="unselectTeamMember(idx)"
-        [(ngModel)]="newTeam.members"
-        ngDefaultControl
-        >{{ selectedTeamMember.username }}</button>
-      </ul>
-    </fieldset>
+  <div id="descriptionWrap">
+    <h2>Write a short description about your team</h2>
+    <input id="descriptionField" type="text" name="description" [(ngModel)]="newTeam.description">
   </div>
 
-    <br><br>
-<button (click)="createTeam()">Create Team</button>
+  <div id="inviteSectionWrap">
+      <div id="inviteWrap">
+        <h3>Invite friends to join your new team!</h3>
+        <button class="invitee" *ngFor="let user of allUsers, let idx = index" (click)="selectTeamMember(idx)">	&#x2b; {{ user.username }}</button>
+      </div>
+
+      <div id="invitedWrap">
+        <h3>Friends to be invited</h3>
+          <button class="invitee" *ngFor="let selectedTeamMember of selectedUsers, let idx = index" name="members" (click)="unselectTeamMember(idx)"
+            [(ngModel)]="newTeam.members" ngDefaultControl>&#x2212; {{ selectedTeamMember.username }}</button>
+      </div>
+  </div>
+
+  <br><br>
+  <button id="createTeamButton" (click)="createTeam()">Create</button>
 
 </div>
