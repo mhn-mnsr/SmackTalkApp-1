@@ -5,12 +5,14 @@
   <div id="loginBox">
     <div id="login">
       <h1 id="logTitle">Login</h1>
-      <form class="inputs" (submit)="onSubmit()">
-        <input placeholder="Email Address" class="inputfields" type="text" name="email" [(ngModel)]="user.email" #email="ngModel"><br>
-        <input placeholder="Password" class="inputfields" type="text" name="password" [(ngModel)]="user.password" #password="ngModel"><br>
-        <input class="inputfields" id="loginButton" type="submit" value="Login">
+      <form class="inputs" (submit)="onSubmit()" #formData="ngForm">
+          <span class="error" *ngIf="email.valid != true && !email.pristine">&#x274C;</span>
+        <input placeholder="Email Address" class="inputfields" type="text" name="email" [(ngModel)]="user.email" required #email="ngModel"><br>
+          <span class="error" *ngIf="password.valid != true && !password.pristine">&#x274C;</span>
+        <input placeholder="Password" class="inputfields" type="password" name="password" [(ngModel)]="user.password" required #password="ngModel"><br>
+        <input class="inputfields" id="loginButton" type="submit" value="Login" [disabled]="!formData.valid">
       </form>
-      <h3>Don't have an account? <a [routerLink]="['']">Register here!</a></h3>
+      <h3>Don't have an account? <a [routerLink]="['']">Register!</a></h3>
     </div>
   </div>
 </div>
