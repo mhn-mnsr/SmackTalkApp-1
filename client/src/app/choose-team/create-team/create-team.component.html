@@ -1,14 +1,8 @@
 <div>
   <div>
-<<<<<<< HEAD
-      <fieldset>
-        <legend>Invite friends to join your new team</legend>
-      <button *ngFor="let user of allUsers, let idx = index">{{ user.username }}</button>
-=======
     <fieldset>
       <legend>Invite friends to join your new team</legend>
       <button *ngFor="let user of allUsers, let idx = index" (click)="selectTeamMember(idx)">{{ user.username }}</button>
->>>>>>> master
     </fieldset>
   </div>
 
