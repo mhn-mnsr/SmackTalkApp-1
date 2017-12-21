@@ -46,6 +46,10 @@
     margin-top: 30px;
     font-family: 'Open Sans', sans-serif;
 }
+#registerButton:active{
+    background-color: #282946;
+    color: white;
+}
 
 h3{
     /* display: inline-block; */

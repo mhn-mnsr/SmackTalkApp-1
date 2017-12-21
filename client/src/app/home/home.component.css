@@ -1,3 +1,7 @@
+*{
+    font-family: 'Open Sans', sans-serif;      
+}
+
 #container{
     /* height: auto;
     width: auto; */
@@ -9,22 +13,89 @@
 
 #topBar{
     display: inline-block;
-    height: 40px;
+    height: 60px;
     width: 850vh;
     background-color: #FFFCF1;
     position: relative;
 }
 #teamName{
     color: white;
+    font-size: 28px;
+    margin-bottom: 0px;
+}
+
+#loggedUser{
+    margin-top: 0px;
+    text-decoration: none;
+    color: white;
+}
+
+.add{
+    display: inline-block;
+    font-size: 19px;
+    color: white;
+    border-radius: 24px;
+    background: none;
+    text-align: center;
+}
+
+.add:active{
+    color: red;
+}
+.leftBarTitles{
+    display: inline-block;
+    margin-bottom: 3px;
+    font-weight: normal;
+    font-size: 22px;
+    
+}
+
+hr{
+    margin-right: 20px;
+}
+
+#chooseTeamPage{
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.leftBarOptions{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+#inviteButton{
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+#invitePlus{
+    font-weight: normal;
 }
 
 #leftBar{
     vertical-align: top;
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
     display: inline-block;
     height: 900vh;
-    width: 230px;
-    background-color: #282946;
+    width: 245px;
+    background-color: #3C3F6D;
+    color: white;
 }
 
 
@@ -34,4 +105,16 @@
     width: 900vh;
     background-color: #E7E7E7;
     position: fixed;
+}
+
+#messageContainer{
+    margin-top: 1000px;
+    height: 40vh;
+    width: 775vh;
+}
+
+#messageBox{
+    height: 30px;
+    width: 775vh;
+    font-size: 14px;
 }
