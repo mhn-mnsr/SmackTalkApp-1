@@ -41,13 +41,13 @@ module.exports = {
             description: req.body.description,
             _members: req.body.members
         });
-        newTeam.save(function (err){
+        newTeam.save(function (err, newTeam){
             if (err){
                 console.log(err);
                 res.json({error: "Saving error in create team"});
             } else {
-                res.json({good: "New team created successfully"});
                 req.session.team = newTeam.teamName;
+                console.log("In createTeam/ team controller", newTeam._id)
                 console.log(req.session.team)
                 User.update({_id: req.body._id},
                 {
@@ -58,6 +58,7 @@ module.exports = {
                         console.log("Error inserting teamid into user._teams", err)
                     } else {
                         console.log("Updated the user", user)
+                        res.json({good: "New team created successfully"});
                     }   
                 });
             }

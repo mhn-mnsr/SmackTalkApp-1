@@ -51,7 +51,10 @@ export class DataService {
   }
 
   getUsersTeams() {
-    
+    console.log("====In data service, set getUsersTeams====");
+    return this._http.get('/api/getUsersTeams')
+    .map(data => data.json())
+    .toPromise();
   }
 
 }

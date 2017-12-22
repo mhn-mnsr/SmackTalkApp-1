@@ -11,18 +11,23 @@ export class HomeComponent implements OnInit {
   usersTeams;
   User: any
   username;
+  Team: any;
 
   constructor(private _dataService : DataService, private _router: Router, private _activatedroute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.usersTeams = this.getUsersTeams();
     this.getUser();
-    console.log("This.user", this.User.username);
+    this.getUsersTeams();
   }
-
+  
   getUsersTeams() {
     console.log('Running getUsersTeams function in home component');
-    this.usersTeams = this._dataService.getUsersTeams();
+    return this._dataService.getUsersTeams()
+    .then(data => {
+      this.User = data.userKey
+      this.usersTeams = data.teamKey;
+      console.log(this.usersTeams)
+    })
   }
 
   getUser(){

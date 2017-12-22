@@ -37,5 +37,9 @@ module.exports = function (app) {
         console.log('Made it to the createTeam route!');
         teamController.createTeam(req, res);
     })
+
+    app.get('/api/getUsersTeams', function (req, res) {
+        homeController.getUsersTeams(req, res);
+    })
     
 };

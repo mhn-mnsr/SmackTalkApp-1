@@ -6,7 +6,8 @@
         <hr>
         <h3 class="leftBarTitles">Your Teams</h3>&nbsp;&nbsp; <button class="add">+</button>
         <ul>
-            <li class="leftBarOptions"># {{ User._teams }}</li>
+            <li class="leftBarOptions" *ngFor="let t of usersTeams">
+                <p> #{{ t.teamName }}</p></li>
         </ul>
         <br>
         <h3 class="leftBarTitles">Teammates</h3>&nbsp;&nbsp; <button class="add">+</button>

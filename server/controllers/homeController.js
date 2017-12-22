@@ -18,4 +18,19 @@ module.exports = {
             }
         })
     },
+
+    getUsersTeams: function (req, res) {
+        console.log('===in HomeController/ getusersteams====');
+        Team.find({'_members': req.session.user }, function (errors, dbTeam) {
+            if (errors) {
+                console.log('===in Controller/getUsersTeams, Error finding teams===')
+            } else {
+                console.log('====in controller getusersteams/ no errors===');
+                console.log(dbTeam)
+                res.json({
+                    teamKey: dbTeam
+                })
+            }
+        })
+    }
 }
