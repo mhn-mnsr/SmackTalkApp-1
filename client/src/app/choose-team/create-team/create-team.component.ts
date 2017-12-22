@@ -22,7 +22,7 @@ export class CreateTeamComponent implements OnInit {
   createTeam() {
     console.log('new team data', this.newTeam);
     this._dataService.createTeam(this.newTeam);
-    this._router.navigateByUrl('home')
+    this._router.navigateByUrl('/home')
   }
 
   getAllUsers() {

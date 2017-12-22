@@ -1,11 +1,11 @@
 var mongoose = require("mongoose");
 var User = mongoose.model("User");
-var bcrypt = require('bcrypt-nodejs');
 var Team = mongoose.model("Team");
+var bcrypt = require('bcrypt-nodejs');
 
 module.exports = {
     getAllUsers: function (req, res) {
-    console.log('Reached the getAllUsers function inside controller.js');
+        console.log('Reached the getAllUsers function inside controller.js');
         User.find({}, function (errors, dbUser) {
             if (errors) {
                 console.log('There was an error getting the data from the database. controller.js');
@@ -16,7 +16,7 @@ module.exports = {
                     userKey: dbUser
                 });
             }
-        }); 
+        });
     },
 
     getAllTeams: function (req, res) {
@@ -34,34 +34,49 @@ module.exports = {
         })
     },
 
-    createTeam: function(req, res) {
+    createTeam: function (req, res) {
         console.log('Made it to Team Controller/ createTeam function');
-        var newTeam = new Team ({
+        var newTeam = new Team({
             teamName: req.body.teamName,
             description: req.body.description,
             _members: req.body.members
         });
-        newTeam.save(function (err, newTeam){
-            if (err){
+        newTeam.save(function (err) {
+            if (err) {
                 console.log(err);
-                res.json({error: "Saving error in create team"});
+                res.json({ error: "Saving error in create team" });
             } else {
                 req.session.team = newTeam.teamName;
                 console.log("In createTeam/ team controller", newTeam._id)
                 console.log(req.session.team)
-                User.update({_id: req.body._id},
-                {
-                    $addToSet: {_teams: newTeam._id}
-                },
-                function (err, user) {
-                    if(err) {
-                        console.log("Error inserting teamid into user._teams", err)
-                    } else {
-                        console.log("Updated the user", user)
-                        res.json({good: "New team created successfully"});
-                    }   
-                });
+                User.update({ _id: req.body._id },
+                    {
+                        $addToSet: { _teams: newTeam._id }
+                    },
+                    function (err, user) {
+                        if (err) {
+                            console.log("Error inserting teamid into user._teams", err)
+                        } else {
+                            console.log("Updated the user", user)
+                            res.json({ good: "New team created successfully" });
+                        }
+                    });
             }
         }
-    )}
+        )
+    },
+
+    joinTeam: function (req, res) {
+        console.log('Made it to Team Controller/ joinTeam function');
+        console.log('Testing req.session.id', req.session.user);
+        console.log('Testing req.body.id', req.body._id);
+        Team.findOneAndUpdate({ _id: req.body._id }, { $addToSet: { _members: req.session.user } }, function (err, dbTeam) {
+            if (err) {
+                console.log('Something went wrong with the team joining');
+            } else {
+                console.log('You have joined the team successfully!', dbTeam);
+
+            }
+        })
+    }
 }

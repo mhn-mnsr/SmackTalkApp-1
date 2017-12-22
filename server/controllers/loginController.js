@@ -22,9 +22,6 @@ module.exports = {
         ({
             username: req.body.username,
             email: req.body.email,
-            // Below 2 lines to be used in userProfile function
-            // firstName: req.body.firstName
-            // bio: req.body.bio
             password: req.body.password,
             confirmPassword: req.body.confirmPassword
         });
@@ -38,8 +35,11 @@ module.exports = {
                     console.log(err);
                     res.json({error: "Saving error in create user"});
                 } else {
-                    res.json({good: "New user created successfully"})
-                    req.session.user = regUser._id;
+                    User.findOne({'email': req.body.email }, function(err, regUser){
+                        req.session.user = regUser._id;
+                        console.log('this is the session id', req.session.user);
+                        res.json({good: "New user created successfully"})
+                    })
                 }
             })
         }
@@ -57,10 +57,10 @@ module.exports = {
                 .then(function (matchedPassword) {
                     console.log("====in controller/loginUser, passwords match====");
                     req.session.user = regUser._id;
-                    res.json({good: "New user logged in successfully"})
+                    res.json({good: "User logged in successfully"})
                 })
                 .catch(function (errors, notMatched) {
-                    console.log("===in contoller/loginUser, emails dont match====");
+                    console.log("===in controller/loginUser, something doesn't match====");
                 });
             }
         });

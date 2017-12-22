@@ -8,11 +8,23 @@ import { DataService } from '../data.service';
   styleUrls: ['./join-team.component.css']
 })
 export class JoinTeamComponent implements OnInit {
-team : any
+allTeams: any
   constructor(private _dataService: DataService) { }
 
   ngOnInit() {
-    this._dataService.getAllTeams();
+    this.getAllTeams();
+  }
+  
+  getAllTeams() {
+    this._dataService.getAllTeams()
+    .then((response) => {
+      this.allTeams = response.teamKey;
+      console.log('Returned all teams from db', this.allTeams);
+    });
   }
 
+  joinTeam(selectedTeam) {
+    console.log('This is the team you selected to join', selectedTeam);
+    this._dataService.joinTeam(selectedTeam);
+  }
 }

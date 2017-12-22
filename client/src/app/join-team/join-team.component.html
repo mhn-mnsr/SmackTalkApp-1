@@ -1,7 +1,17 @@
-<h1>Hello this is some html for join-team component</h1>
-<div>
-    <input [(ngModel)]="searchText">
-    <div *ngFor="let t of team | filterPipe: searchText">
-        {{ t }}
+
+
+<div id="container">
+    <div id="headerbar">
+        <button [routerLink]="['/home']" id="logo"></button>
+        <a id="logoutLink" [routerLink]="['/']">Logout</a>
     </div>
+    <h1>Search for an existing team.</h1>
+    <div id="searchContainer">
+        <input id="searchBox" [(ngModel)]="searchText">
+    </div>
+    <div id="displayTeams">
+        <button (click)="joinTeam(selectedTeam)" class="listedTeam" *ngFor="let team of allTeams, let selectedTeam of index| filterPipe: searchText">&#x2b; {{ team.teamName }}</button>
+    </div>
+
 </div>
+      
