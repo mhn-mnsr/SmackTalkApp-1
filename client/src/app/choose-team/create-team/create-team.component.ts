@@ -39,7 +39,7 @@ export class CreateTeamComponent implements OnInit {
   }
 
   unselectTeamMember(idx) {
-    this.selectedUsers.splice(idx, 1);
     this.allUsers.push(this.selectedUsers[idx]);
+    this.selectedUsers.splice(idx, 1);
   }
 }

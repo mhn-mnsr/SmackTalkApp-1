@@ -9,16 +9,17 @@ import { User } from '../../user';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
-  constructor(private _dataService: DataService, private _router: Router) { }
   user = new User();
+
+  constructor(private _dataService: DataService, private _router: Router) { }
+  
   ngOnInit() {
   }
 
   onSubmit(){
-    this._dataService.login(this.user).then(data =>{
-      if(data.error){
-        console.log(data.error)
+    this._dataService.login(this.user).then(data => {
+      if (data.error) {
+        console.log(data.error);
       } else {
         this._router.navigateByUrl('home');
       }

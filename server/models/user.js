@@ -33,10 +33,6 @@ var UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password cannot be blank']
     },
-    confirmPassword: {
-        type: String,
-        required: true
-    },
     bio: {
         type: String,
         // required: [true, 'bio cannot be blank']
