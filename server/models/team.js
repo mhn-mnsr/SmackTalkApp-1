@@ -1,6 +1,5 @@
 console.log('team model');
 var mongoose = require("mongoose");
-var bcrypt = require('bcrypt');
 var teamSession = require('express-session');
 var Schema = mongoose.Schema;
 

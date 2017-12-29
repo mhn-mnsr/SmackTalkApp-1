@@ -13,13 +13,14 @@ export class LoginComponent implements OnInit {
 
   constructor(private _dataService: DataService, private _router: Router) { }
   user = new User();
+  
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(){
     this._dataService.login(this.user).then(data => {
       if (data.error) {
-        console.log(data.error)
+        console.log(data.error);
       } else {
         this._dataService.getUsersFirstTeamID()
           .then((response) => {
