@@ -8,7 +8,8 @@ import { DataService } from '../data.service';
   styleUrls: ['./join-team.component.css']
 })
 export class JoinTeamComponent implements OnInit {
-allTeams: any
+allTeams: Array<any> = [];
+searchText: string = '';
   constructor(private _dataService: DataService) { }
 
   ngOnInit() {

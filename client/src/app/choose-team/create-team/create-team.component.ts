@@ -9,11 +9,13 @@ import { DataService } from '../../data.service';
   styleUrls: ['./create-team.component.css']
 })
 export class CreateTeamComponent implements OnInit {
-  allUsers;
+  allUsers: Array<any> = [];
   selectedUsers: Array<any> = [];
   newTeam: Object = {'teamName': '', 'description': '', 'members': this.selectedUsers};
+  teamID;
 
-  constructor(private _dataService: DataService, private _route: ActivatedRoute, private _router: Router) { }
+  constructor(private _dataService: DataService, private _route: ActivatedRoute, private _router: Router) { 
+  }
 
   ngOnInit() {
     this.getAllUsers();
@@ -21,8 +23,12 @@ export class CreateTeamComponent implements OnInit {
 
   createTeam() {
     console.log('new team data', this.newTeam);
-    this._dataService.createTeam(this.newTeam);
-    this._router.navigateByUrl('/home')
+    this._dataService.createTeam(this.newTeam)
+    .then((response) => {
+      this.teamID = response.newTeamIDKey;
+      console.log('Returned teamID from create team function', this.teamID);
+      this._router.navigateByUrl(`/home/${this.teamID}`);
+    });
   }
 
   getAllUsers() {
@@ -39,7 +45,7 @@ export class CreateTeamComponent implements OnInit {
   }
 
   unselectTeamMember(idx) {
-    this.selectedUsers.splice(idx, 1);
     this.allUsers.push(this.selectedUsers[idx]);
+    this.selectedUsers.splice(idx, 1);
   }
 }

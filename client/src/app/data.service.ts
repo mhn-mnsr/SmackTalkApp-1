@@ -58,10 +58,19 @@ export class DataService {
   }
 
   getUsersTeams() {
-    console.log("====In data service, set getUsersTeams====");
+    console.log("====In data service, getUsersTeams====");
     return this._http.get('/api/getUsersTeams')
     .map(data => data.json())
     .toPromise();
+  }
+  
+  // This function may not be neccessary for routing and is being placed on hold for now.
+  getUsersFirstTeamID() {
+    console.log("====In data service, getUsersFirstTeamID====");
+    return this._http.get('/api/getUsersFirstTeamID')
+    .map(data => data.json())
+    .toPromise();
+    
   }
 
 }

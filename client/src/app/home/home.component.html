@@ -4,17 +4,17 @@
         <a href="" id="loggedUser">&#9679; adarbars</a>
         <br>
         <hr>
-        <h3 class="leftBarTitles">Your Teams</h3>&nbsp;&nbsp; <button class="add">+</button>
+        <h3 class="leftBarTitles">Your Teams</h3>&nbsp;&nbsp; <button class="add" [routerLink]="['/chooseTeam']">+</button>
         <ul>
             <li class="leftBarOptions" *ngFor="let t of usersTeams">
-                <p> #{{ t.teamName }}</p></li>
+                <p>>#{{ t.teamName }}</p></li>
         </ul>
         <br>
         <h3 class="leftBarTitles">Teammates</h3>&nbsp;&nbsp; <button class="add">+</button>
         <p class="leftBarOptions">Bob</p>
         <p class="leftBarOptions">Sarah</p>
         <br>
-        <button id="inviteButton"><span id="invitePlus">+ </span>Invite People</button>
+        <button id="inviteButton"><span id="invitePlus">+</span>Invite People</button>
         <br>
         <br>
         <button id="chooseTeamPage" [routerLink]="['/chooseTeam']"><span id="invitePlus">+ </span>Create or Join Team</button>
@@ -28,4 +28,3 @@
         </div>
     </div>
 </div>
-

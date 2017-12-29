@@ -7,7 +7,7 @@
     </div>
     <h1>Search for an existing team.</h1>
     <div id="searchContainer">
-        <input id="searchBox" [(ngModel)]="searchText">
+        <input id="searchBox" [(ngModel)]="searchText" >
     </div>
     <div id="displayTeams">
         <button (click)="joinTeam(selectedTeam)" class="listedTeam" *ngFor="let team of allTeams, let selectedTeam of index| filterPipe: searchText">&#x2b; {{ team.teamName }}</button>

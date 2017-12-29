@@ -47,8 +47,8 @@ module.exports = {
                 res.json({ error: "Saving error in create team" });
             } else {
                 req.session.team = newTeam.teamName;
-                console.log("In createTeam/ team controller", newTeam._id)
-                console.log(req.session.team)
+                console.log("In createTeam/ team controller. New Team id ->", newTeam._id)
+                console.log('req.session.name ->', req.session.team)
                 User.update({ _id: req.body._id },
                     {
                         $addToSet: { _teams: newTeam._id }
@@ -58,7 +58,7 @@ module.exports = {
                             console.log("Error inserting teamid into user._teams", err)
                         } else {
                             console.log("Updated the user", user)
-                            res.json({ good: "New team created successfully" });
+                            res.json({ newTeamIDKey: newTeam._id});
                         }
                     });
             }
@@ -68,8 +68,6 @@ module.exports = {
 
     joinTeam: function (req, res) {
         console.log('Made it to Team Controller/ joinTeam function');
-        console.log('Testing req.session.id', req.session.user);
-        console.log('Testing req.body.id', req.body._id);
         Team.findOneAndUpdate({ _id: req.body._id }, { $addToSet: { _members: req.session.user } }, function (err, dbTeam) {
             if (err) {
                 console.log('Something went wrong with the team joining');
@@ -78,5 +76,21 @@ module.exports = {
 
             }
         })
-    }
+    },
+
+    getUsersFirstTeamID: function (req, res) {
+        console.log('Made it to team controller/getUsersFirstTeamID function');
+        Team.findOne({ '_members': req.params.teamName }, function (errors, dbTeamID) {
+            if (errors) {
+                console.log('There was an error getting the Team ID in teamcontroller.');
+                res.json(errors);
+            } else {
+                console.log('Returning with the Team ID');
+                res.json({
+                    'teamIdKey': dbTeamID
+                });
+            }
+
+        });
+    },
 }

@@ -1,4 +1,4 @@
 export class Team {
-    teamName: {type: string, required: false};
+    teamName: {type: string, unique: true, required: false};
     description: {type: string, required: false};
 }

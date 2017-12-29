@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'chooseTeam', pathMatch: 'full', component: ChooseTeamComponent },
   { path: 'createTeam', pathMatch: 'full', component: CreateTeamComponent },
   { path: 'joinTeam', pathMatch: 'full', component: JoinTeamComponent },
-  { path: 'home', pathMatch: 'full', component: HomeComponent },
+  { path: 'home/:id', component: HomeComponent },
 
 ]
   

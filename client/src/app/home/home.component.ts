@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { DataService } from '../data.service';
+import 'rxjs/add/operator/switchMap';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
