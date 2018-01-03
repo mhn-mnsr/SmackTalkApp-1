@@ -1,14 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router } from '@angular/router';
+import { BehaviorSubject } from 'Rxjs';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class DataService {
-  sessionUsername;
 
-  constructor(private _http: Http) { }
+  constructor(private _http: Http, private _router: Router) { }
+
+  userSession: BehaviorSubject<any> = new BehaviorSubject([]);
+
+  returnSession(){
+    return this.userSession.getValue();
+  }
 
   addUser(newUser) {
     return this._http.post('/api/registerUser', newUser)
@@ -24,9 +31,20 @@ export class DataService {
   }
 
   login(user){
-    return this._http.post('/api/loginUser', user)
-    .map(data => data.json())
-    .toPromise();
+    console.log('Logging in User:', user)
+    return new Promise((resolve, reject)=> {
+      this._http.post('/api/loginUser', user)
+      .map(response => response.json())
+      .subscribe(response => {
+        console.log("Adding response to observable -- make sure it is json --", response);
+        this.userSession.next(response)
+        resolve(response);
+      });
+      error => {
+        console.log("There were errors in login process in database");
+        reject(error);
+      }
+    })
   }
 
   getAllTeams() {

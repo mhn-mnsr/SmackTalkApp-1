@@ -20,7 +20,7 @@ git checkout master
 git merge <branch_name>
 git add .
 git commit -m "<Message>"
-git pus
+git push
 
 # Don't forget to leave the branch you've been working on as well as the master branch and start a new branch!
 git branch <name> (create new branch)

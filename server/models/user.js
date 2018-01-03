@@ -42,25 +42,23 @@ var UserSchema = new mongoose.Schema({
   }, {timestamps: true});
 
   //hashes my password
-UserSchema.methods.hashPassword = function(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(8));
-}
+// UserSchema.methods.hashPassword = function(password) {
+//     return bcrypt.hashSync(password, bcrypt.genSaltSync(8));
+// }
 
-UserSchema.methods.validatePassword = function(input) {
-    return bcrypt.compareSync(input, this.password);
-}
+// UserSchema.methods.validatePassword = function(input) {
+//     return bcrypt.compareSync(input, this.password);
+// }
 
-UserSchema.pre('save', function(done) {
-    this.password = this.hashPassword(this.password);
-    done();
+UserSchema.pre('save', function(next) {
+    bcrypt.hash(this.password, 10).then(hashed_password => {
+        this.password = hashed_password;
+        next()
+    }).catch(error => {
+        next()
+    });
 });
 
-
-var TeamSchema = new mongoose.Schema({
-    teamName: String,
-    description: String,
-    _members: [{ type: String, ref: 'User' }]
-})
 
 mongoose.model("User", UserSchema);
 

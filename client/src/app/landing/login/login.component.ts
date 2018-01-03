@@ -10,28 +10,40 @@ import { User } from '../../user';
 })
 export class LoginComponent implements OnInit {
   firstTeamID;
+  currentUser;
 
   constructor(private _dataService: DataService, private _router: Router) { }
-  user = new User();
+user = new User();
+  error= ''
   
   ngOnInit() {
+    this._dataService.userSession.subscribe(
+      (user) => {
+        console.log("User in SUBSCRIBE", user);
+        if (user['loggedIn']) {
+          this.currentUser = user
+        }
+      }
+    )
   }
 
+
+
   onSubmit(){
-    this._dataService.login(this.user).then(data => {
-      if (data.error) {
-        console.log(data.error);
-      } else {
+    this._dataService.login(this.user)
+    .then(response => {
+      if (response['loggedIn']) {
+        console.log("Returned to login")
         this._dataService.getUsersFirstTeamID()
           .then((response) => {
-            this.firstTeamID = response.firstTeamIDKey;
+            this.firstTeamID = response.teamIDKey;
             console.log('Returned first teamID of the user from the getUsersFirstTeamID function', this.firstTeamID);
             this._router.navigateByUrl(`home/${this.firstTeamID}`);
           }
-
           )
+      } else {
+        this.error = response['Error']
       }
-
     })
   }
 }

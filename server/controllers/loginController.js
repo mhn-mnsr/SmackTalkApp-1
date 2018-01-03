@@ -48,20 +48,26 @@ module.exports = {
         console.log("=====In controller, loginUser function====")
         console.log(req.body.email);
         User.findOne({'email': req.body.email }, function(err, regUser){
-            if (regUser != null) {
-                console.log("====In controller, loginUser function, after if regUser != null======");
-                console.log(regUser);
-                console.log(req.body.password);
-                bcrypt.compare(req.body.password, regUser.password)
-                .then(function (matchedPassword) {
-                    console.log("====in controller/loginUser, passwords match====");
-                    req.session.user = regUser._id;
-                    res.json({good: "User logged in successfully"});
-                })
-                .catch(function (errors, notMatched) {
-                    console.log("===in controller/loginUser, something doesn't match====");
-                });
+            if (err || regUser == null) {
+                console.log("====In controller, loginUser function, after if regUser == null======");
+                return res.json({Error: 'Password of email does not match'})
+            } else {
+                console.log('req.body.password:', regUser.password)
+                if (bcrypt.compareSync(req.body.password, regUser.password)) {
+                    console.log("This is from loginuser controller:", req.body, regUser)
+                    let response = {
+                        username: regUser.username,
+                        email: regUser.email,
+                        loggedIn: true
+                    }
+                    req.session.user = regUser._id
+                    console.log("SESSION ID:", req.session.user)
+                    return res.json(response)
+                } else {
+                    console.log("====Failed comparing passwords=====")
+                    return res.json({Error: 'Password or email doesnt match', loggedIn: false})
+                }
             }
-        });
+        })
     }
 }

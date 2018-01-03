@@ -49,7 +49,7 @@ module.exports = {
                 req.session.team = newTeam.teamName;
                 console.log("In createTeam/ team controller. New Team id ->", newTeam._id)
                 console.log('req.session.name ->', req.session.team)
-                User.update({ _id: req.body._id },
+                User.update({ _id: req.session.user },
                     {
                         $addToSet: { _teams: newTeam._id }
                     },
@@ -75,17 +75,18 @@ module.exports = {
                 console.log('You have joined the team successfully!', dbTeam);
 
             }
-        })
+        });
     },
 
     getUsersFirstTeamID: function (req, res) {
         console.log('Made it to team controller/getUsersFirstTeamID function');
-        Team.findOne({ '_members': req.params.teamName }, function (errors, dbTeamID) {
+        User.findOne({ '_teams': req.session.user }, function (errors, dbTeamID) {
+            console.log('====In teamcontrollersearching for session===', req.session.user);
             if (errors) {
                 console.log('There was an error getting the Team ID in teamcontroller.');
                 res.json(errors);
             } else {
-                console.log('Returning with the Team ID');
+                console.log('Returning with the Team ID:' , dbTeamID);
                 res.json({
                     'teamIdKey': dbTeamID
                 });
