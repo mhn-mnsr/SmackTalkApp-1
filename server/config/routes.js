@@ -54,4 +54,9 @@ module.exports = function (app) {
         console.log('Made it to the joinTeam route!');
         teamController.joinTeam(req, res);
     })
+
+    app.post('/api/createMessage', function(req,res) {
+        console.log('Made it to createMessage route!');
+        homeController.createMessage(req,res);
+    })
 };

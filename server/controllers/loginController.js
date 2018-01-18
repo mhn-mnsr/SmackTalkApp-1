@@ -52,7 +52,7 @@ module.exports = {
                 console.log("====In controller, loginUser function, after if regUser != null======");
                 console.log(regUser);
                 console.log(req.body.password);
-                bcrypt.compare(req.body.password, regUser.password)
+                bcrypt.compareSync(req.body.password, regUser.password)
                 .then(function (matchedPassword) {
                     console.log("====in controller/loginUser, passwords match====");
                     req.session.user = regUser._id;

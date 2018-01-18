@@ -2,6 +2,7 @@ var mongoose = require("mongoose");
 var User = mongoose.model("User");
 var bcrypt = require('bcrypt-nodejs');
 var Team = mongoose.model("Team");
+var Message = mongoose.model("Message");
 
 module.exports = {
     getOneUser: function (req, res) {
@@ -30,6 +31,35 @@ module.exports = {
                 res.json({
                     teamKey: dbTeam
                 })
+            }
+        })
+    },
+
+    createMessage: function(req,res) {
+        console.log('======in controller/createMessage=====');
+        var newMessage = new Message
+        ({
+            message: req.body.message,
+            _user: req.session.user,
+            _team: req.session.team
+        })
+        newMessage.save(function (err) {
+            console.log(err);
+            if (err){
+                res.json({error: "Saving error in message"});
+            } else {
+            Message.findOne({'message': req.body.message}, function(err, newMessage) {
+                req.session.message = newMessage._id;
+                res.json({good: "New message created successfully"})
+            })
+            Team.findOne({'_id': req.session.team}, function (errors, dbTeam){
+                if (errors) {
+                    console.log("===in Controller/createMessage, Error finding teams===")
+                    res.json({
+                        teamID : dbTeam
+                    })
+                }
+            })
             }
         })
     }

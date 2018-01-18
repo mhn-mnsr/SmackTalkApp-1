@@ -1,0 +1,13 @@
+<form #formData = "ngForm" (submit)= "onSubmit()">
+
+  <span class = "text-danger" *ngIf="message.touched && !message.valid">Message is required</span> 
+  <input type="text"
+  id="messageBox"
+  name="message"
+  required
+  minlength="4"
+  [(ngModel)]="newMessage.message"
+  #message = "ngModel">
+
+  <button type="submit">Submit</button>
+</form>

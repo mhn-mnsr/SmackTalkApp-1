@@ -22,16 +22,17 @@ export class LoginComponent implements OnInit {
       if (data.error) {
         console.log(data.error);
       } else {
-        this._dataService.getUsersFirstTeamID()
+        if (this._dataService.getAllTeams == null){
+          this._router.navigateByUrl('chooseTeam')
+        } else {
+          this._dataService.getUsersFirstTeamID()
           .then((response) => {
-            this.firstTeamID = response.firstTeamIDKey;
+            this.firstTeamID = response.teamIdKey;
             console.log('Returned first teamID of the user from the getUsersFirstTeamID function', this.firstTeamID);
             this._router.navigateByUrl(`home/${this.firstTeamID}`);
-          }
-
-          )
+          })
+        }
       }
-
     })
   }
 }

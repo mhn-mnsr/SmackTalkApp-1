@@ -14,6 +14,11 @@ export class HomeComponent implements OnInit {
   User: any
   username;
   Team: any;
+  teamID;
+  message = {
+    message: String,
+    author: this.User
+  }
 
   constructor(private _dataService : DataService, private _router: Router, private _activatedroute: ActivatedRoute) { }
 
@@ -39,4 +44,15 @@ export class HomeComponent implements OnInit {
   })
   }
 
+  // handleMessageCreation(){
+  //   this._dataService.createMessage(this.message)
+  //   .then(response => {
+  //     if(response.error){
+  //       console.log(response.error)
+  //     } else {
+  //       this.teamID = response.teamID
+  //       this._router.navigateByUrl(`/home/${this.teamID}`)
+  //     }
+  //   })
+  // }
 }

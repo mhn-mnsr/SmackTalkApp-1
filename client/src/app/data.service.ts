@@ -73,4 +73,10 @@ export class DataService {
     
   }
 
+  createMessage(message) {
+    console.log("======in data service/createMessage====");
+    return this._http.post('/api/teamID', message)
+    .map(data => data.json())
+    .toPromise();
+  }
 }

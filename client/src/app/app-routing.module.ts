@@ -7,6 +7,8 @@ import { CreateTeamComponent } from './choose-team/create-team/create-team.compo
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
 import { HomeComponent } from './home/home.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
+import { CreateMessageComponent } from './home/create-message/create-message.component'
+import { ShowMessageComponent } from './home/show-message/show-message.component'
 
 
 

@@ -80,12 +80,13 @@ module.exports = {
 
     getUsersFirstTeamID: function (req, res) {
         console.log('Made it to team controller/getUsersFirstTeamID function');
-        Team.findOne({ '_members': req.params.teamName }, function (errors, dbTeamID) {
+        User.findOne({ _teams: req.session.team }, function (errors, dbTeamID) {
             if (errors) {
                 console.log('There was an error getting the Team ID in teamcontroller.');
                 res.json(errors);
             } else {
                 console.log('Returning with the Team ID');
+                console.log("=====This is the firstTeamId====", dbTeamID)
                 res.json({
                     'teamIdKey': dbTeamID
                 });

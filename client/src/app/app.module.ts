@@ -14,6 +14,8 @@ import { CreateTeamComponent } from './/choose-team/create-team/create-team.comp
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
 import { HomeComponent } from './home/home.component';
 import { FilterPipePipe } from './filter-pipe.pipe';
+import { CreateMessageComponent } from './home/create-message/create-message.component';
+import { ShowMessageComponent } from './home/show-message/show-message.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { FilterPipePipe } from './filter-pipe.pipe';
     JoinTeamComponent,
     ChooseTeamComponent,
     HomeComponent,
-    FilterPipePipe
+    FilterPipePipe,
+    CreateMessageComponent,
+    ShowMessageComponent
   ],
   imports: [
     BrowserModule,
