@@ -28,7 +28,6 @@ user = new User();
   }
 
 
-
   onSubmit(){
     this._dataService.login(this.user)
     .then(response => {
@@ -36,14 +35,19 @@ user = new User();
         console.log("Returned to login")
         this._dataService.getUsersFirstTeamID()
           .then((response) => {
-            this.firstTeamID = response.teamIDKey;
+            this.firstTeamID = response.teamIdKey;
             console.log('Returned first teamID of the user from the getUsersFirstTeamID function', this.firstTeamID);
-            this._router.navigateByUrl(`home/${this.firstTeamID}`);
-          }
-          )
+            if(this.firstTeamID == null){
+                console.log("=====in login component, firstteamid is null===")
+                this._router.navigateByUrl('/chooseTeam');
+            } else {
+                this._router.navigateByUrl(`home/${this.firstTeamID}`)
+            }
+          })
       } else {
-        this.error = response['Error']
+        this.error = response['errors']
       }
     })
   }
 }
+

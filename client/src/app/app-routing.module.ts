@@ -13,13 +13,17 @@ import { JoinTeamComponent } from './join-team/join-team.component';
 const routes: Routes = [
   { path: '', component: LandingComponent,children: [
       { path: '', component: RegisterComponent },
-      { path: 'login', component: LoginComponent },
+      { path: 'login', component: LoginComponent, children: [
+        {path: 'home/:id', component: LoginComponent}
+      ] },
   ]},
 
   { path: 'chooseTeam', pathMatch: 'full', component: ChooseTeamComponent },
   { path: 'createTeam', pathMatch: 'full', component: CreateTeamComponent },
   { path: 'joinTeam', pathMatch: 'full', component: JoinTeamComponent },
-  { path: 'home/:id', component: HomeComponent },
+  { path: 'home', component: HomeComponent, children: [
+    {path: ':id', component: HomeComponent}
+  ]},
 
 ]
   
