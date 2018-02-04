@@ -14,6 +14,7 @@ export class RegisterComponent implements OnInit {
   constructor(private _dataService: DataService, private _router: Router) { }
 
   ngOnInit() {
+    
   }
 
   onSubmit(){
