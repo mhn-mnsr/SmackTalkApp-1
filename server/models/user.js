@@ -3,7 +3,6 @@ var mongoose = require("mongoose");
 var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 var bcrypt = require('bcrypt');
 var userSession = require('express-session');
-var teamSession = require('express-session');
 var Schema = mongoose.Schema;
 
 
@@ -37,7 +36,8 @@ var UserSchema = new mongoose.Schema({
         type: String,
         // required: [true, 'bio cannot be blank']
     },
-    _teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }]
+    _teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }],
+    _message: [{ type: Schema.Types.ObjectId, ref: 'Message' }]
 
   }, {timestamps: true});
 

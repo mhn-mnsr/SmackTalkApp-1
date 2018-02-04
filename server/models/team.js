@@ -7,6 +7,7 @@ var TeamSchema = new mongoose.Schema({
     teamName: {type: String, unique: true},
     description: String,
     _members: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    _message: [{ type: Schema.Types.ObjectId, ref: 'Message' }]    
 }, { timestamps: true });
 
 mongoose.model('Team', TeamSchema);
