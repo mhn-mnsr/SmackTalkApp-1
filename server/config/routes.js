@@ -41,6 +41,7 @@ module.exports = function (app) {
     })
     
     app.get('/api/getUsersTeams', function (req, res) {
+        console.log(req.params)
         console.log('Made it to the getUsersTeams route!');
         homeController.getUsersTeams(req, res);
     })
@@ -54,4 +55,10 @@ module.exports = function (app) {
         console.log('Made it to the joinTeam route!');
         teamController.joinTeam(req, res);
     })
+
+    // app.get('/api/fuckme/:id'), function(req, res){
+    //     console.log('Made it to fuckme route');
+    //     homeController.fuckme(req,res);
+    // }
+
 };

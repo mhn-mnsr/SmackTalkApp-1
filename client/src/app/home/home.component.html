@@ -1,3 +1,4 @@
+
 <div id="container">
     <div id="leftBar">
         <h1 id="teamName">{{ User.username }}</h1>
@@ -7,7 +8,8 @@
         <h3 class="leftBarTitles">Your Teams</h3>&nbsp;&nbsp; <button class="add" [routerLink]="['/chooseTeam']">+</button>
         <ul>
             <li class="leftBarOptions" *ngFor="let t of usersTeams">
-                <p>>#{{ t.teamName }}</p></li>
+                <a [routerLink]="['../../home',t._id]">#{{ t.teamName }}</a>
+            </li>
         </ul>
         <br>
         <h3 class="leftBarTitles">Teammates</h3>&nbsp;&nbsp; <button class="add">+</button>

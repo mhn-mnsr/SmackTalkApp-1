@@ -77,7 +77,7 @@ export class DataService {
 
   getUsersTeams() {
     console.log("====In data service, getUsersTeams====");
-    return this._http.get('/api/getUsersTeams')
+    return this._http.get(`/api/getUsersTeams`)
     .map(data => data.json())
     .toPromise();
   }
@@ -89,6 +89,13 @@ export class DataService {
     .map(data => data.json())
     .toPromise();
     
-  }
+  } 
+
+  // fuckme(id){
+  //   console.log("===In data service, fuckme=====");
+  //   return this._http.get(`/api/fuckme/${id}`)
+  //   .map( data => data.json())
+  //   .toPromise()
+  // }
 
 }
