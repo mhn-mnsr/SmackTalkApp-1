@@ -7,12 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "angular2-fontawesome": "^0.9.3",
     "bcrypt": "^1.0.3",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.13.1",
+    "bootstrap": "^4.0.0",
     "express": "~4.10.0",
     "express-session": "^1.15.6",
-    "mongoose": "^4.13.7"
+    "font-awesome": "^4.7.0",
+    "mongoose": "^4.13.7",
+    "ngx-bootstrap": "^2.0.2"
   },
   "repository": {
     "type": "git",

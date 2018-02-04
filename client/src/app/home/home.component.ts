@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { DataService } from '../data.service';
+import { AlertModule } from 'ngx-bootstrap';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
