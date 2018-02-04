@@ -22,11 +22,11 @@ export class CreateTeamComponent implements OnInit {
   }
 
   createTeam() {
-    console.log('new team data', this.newTeam);
+    //console.log('new team data', this.newTeam);
     this._dataService.createTeam(this.newTeam)
     .then((response) => {
       this.teamID = response.newTeamIDKey;
-      console.log('Returned teamID from create team function', this.teamID);
+      //console.log('Returned teamID from create team function', this.teamID);
       this._router.navigateByUrl(`/home/${this.teamID}`);
     });
   }
@@ -35,7 +35,7 @@ export class CreateTeamComponent implements OnInit {
     this._dataService.getAllUsers()
     .then((response) => {
       this.allUsers = response.userKey;
-      console.log('Returned all users from db', this.allUsers);
+      //console.log('Returned all users from db', this.allUsers);
     });
   }
 

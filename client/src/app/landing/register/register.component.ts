@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(){
     this._dataService.addUser(this.user).then(data =>{
       if(data.error){
-        console.log(data.error)
+        //console.log(data.error)
       } else {
         this._router.navigateByUrl('chooseTeam');
       }

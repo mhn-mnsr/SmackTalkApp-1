@@ -23,12 +23,12 @@ export class HomeComponent implements OnInit {
   }
   
   getUsersTeams() {
-    console.log('Running getUsersTeams function in home component');
+    //console.log('Running getUsersTeams function in home component');
     return this._dataService.getUsersTeams()
     .then(data => {
       this.User = data.userKey
       this.usersTeams = data.teamKey;
-      console.log(this.usersTeams)
+      //console.log(this.usersTeams)
     })
   }
 
