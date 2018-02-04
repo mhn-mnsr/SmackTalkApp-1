@@ -18,6 +18,6 @@ routes_setter(app);
 
 
 app.listen(8000, function(){
-    console.log(__dirname);
-    console.log("Listening on port 8000");
+    //console.log(__dirname);
+    //console.log("Listening on port 8000");
 });

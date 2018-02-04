@@ -1,4 +1,4 @@
-console.log('users model');
+//console.log('users model');
 var mongoose = require("mongoose");
 var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 var bcrypt = require('bcrypt');

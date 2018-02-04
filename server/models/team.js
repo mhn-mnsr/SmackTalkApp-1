@@ -1,4 +1,4 @@
-console.log('team model');
+//console.log('team model');
 var mongoose = require("mongoose");
 var teamSession = require('express-session');
 var Schema = mongoose.Schema;

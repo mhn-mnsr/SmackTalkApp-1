@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this._dataService.userSession.subscribe(
       (user) => {
-        console.log("User in SUBSCRIBE", user);
+        //console.log("User in SUBSCRIBE", user);
         if (user['loggedIn']) {
           this.currentUser = user
         }
@@ -32,13 +32,13 @@ export class LoginComponent implements OnInit {
     this._dataService.login(this.user)
     .then(response => {
       if (response['loggedIn']) {
-        console.log("Returned to login")
+        //console.log("Returned to login")
         this._dataService.getUsersFirstTeamID()
           .then((response) => {
             this.firstTeamID = response.teamIdKey;
-            console.log('Returned first teamID of the user from the getUsersFirstTeamID function', this.firstTeamID);
+            //console.log('Returned first teamID of the user from the getUsersFirstTeamID function', this.firstTeamID);
             if(this.firstTeamID == null){
-                console.log("=====in login component, firstteamid is null===")
+                //console.log("=====in login component, firstteamid is null===")
                 this._router.navigateByUrl('/chooseTeam');
             } else {
                 this._router.navigateByUrl(`home/${this.firstTeamID}`)

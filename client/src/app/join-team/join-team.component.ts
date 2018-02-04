@@ -20,12 +20,12 @@ searchText: string = '';
     this._dataService.getAllTeams()
     .then((response) => {
       this.allTeams = response.teamKey;
-      console.log('Returned all teams from db', this.allTeams);
+      //console.log('Returned all teams from db', this.allTeams);
     });
   }
 
   joinTeam(selectedTeam) {
-    console.log('This is the team you selected to join', selectedTeam);
+    //console.log('This is the team you selected to join', selectedTeam);
     this._dataService.joinTeam(selectedTeam);
   }
 }

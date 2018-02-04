@@ -1,4 +1,4 @@
-console.log('messages model');
+//console.log('messages model');
 var mongoose = require("mongoose");
 var bcrypt = require('bcrypt');
 var messagesSession = require('express-session');

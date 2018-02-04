@@ -1,7 +1,7 @@
 
 <div id="container">
     <div id="leftBar">
-        <h1 id="teamName">{{ User.username }}</h1>
+        <h1 id="teamName">{{ User?.username?.toString() }}</h1>
         <a href="" id="loggedUser">&#9679; adarbars</a>
         <br>
         <hr>
@@ -30,3 +30,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        console.log(User)
+        console.log('heello')
+    })
+    
+</script>
