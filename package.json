@@ -1,5 +1,5 @@
 {
-  "name": "SmackTalkApp",
+  "name": "smacktalkapp",
   "version": "1.0.0",
   "description": "Slack clone using MEAN stack",
   "main": "index.js",
