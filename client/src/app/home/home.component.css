@@ -71,7 +71,11 @@ hr{
     background: none;
     text-decoration: none;
     font-size: 15px;
-    color: white;
+    color: white
+}
+
+.leftBarTeamName{
+    color: white
 }
 
 #inviteButton{

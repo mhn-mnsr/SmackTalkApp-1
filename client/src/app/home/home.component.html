@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <!-- <div id="container">
+=======
+
+<div id="container">
+>>>>>>> 770f78bd4d28bb4b2c525455dbe61892eb85e66e
     <div id="leftBar">
         <h1 id="teamName">{{ User?.username?.toString() }}</h1>
         <a href="" id="loggedUser">&#9679; adarbars</a>
@@ -8,7 +13,11 @@
         <button class="add" [routerLink]="['/chooseTeam']">+</button>
         <ul>
             <li class="leftBarOptions" *ngFor="let t of usersTeams">
+<<<<<<< HEAD
                 <p>>#{{ t.teamName }}</p>
+=======
+                <a [routerLink]="['../../home',t._id]">#{{ t.teamName }}</a>
+>>>>>>> 770f78bd4d28bb4b2c525455dbe61892eb85e66e
             </li>
         </ul>
         <br>

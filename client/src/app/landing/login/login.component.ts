@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
 import { Router } from '@angular/router'
 import { User } from '../../user';
@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   currentUser;
 
   constructor(private _dataService: DataService, private _router: Router) { }
-user = new User();
+  user = new User();
   error= ''
   
   ngOnInit() {
