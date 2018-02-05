@@ -33,19 +33,19 @@
             <div class="list-group border-0 card text-center text-md-left">
                 <h3 class="navbar-brand" style="color:white">Smack Talk</h3>
                 <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
-{{User?.username?.toString()}}
+{{User?.username}}
                 </a>
                 <div class="collapse" id="menu1">
-                    <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">View Profile</a>
-                    <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Log Out</a>
+                    <a class="list-group-item" >View Profile</a>
+                    <a class="list-group-item" >Log Out</a>
                 </div>
                 <a href="#menu2" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false">
                     Teams
                 </a>
                 <div class="collapse" id="menu2">
-                    <a href="#menu2sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Main Team</a>
+                    <a href="#menu2sub2" class="list-group-item">Main Team</a>
                     <!-- add id later on dont listen to maheen -->
-                    <a href="#menu2sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false" *ngFor="let t of usersTeams">{{t.teamName}}</a>
+                    <a href="#menu2sub2" class="list-group-item" *ngFor="let t of usersTeams">{{t.teamName}}</a>
                     <!-- add id later on dont listen to maheen -->
                 </div>
                 <!-- put it under me-->
@@ -59,7 +59,6 @@
 
         </div>
         <main class="col-md-9 float-left col px-5 pl-md-2 pt-2 main">
-            Put shit here probably app-chat
             <app-chat></app-chat>
         </main>
     </div>
